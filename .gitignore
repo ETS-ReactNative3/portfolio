@@ -9,6 +9,10 @@
 # production
 /build
 
+# css build files
+src/App.css
+src/assets/assetcss/triangle.css
+
 # misc
 .DS_Store
 .env.local
