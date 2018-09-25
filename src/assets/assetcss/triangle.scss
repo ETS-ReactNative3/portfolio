@@ -1,5 +1,8 @@
 /* TRIANGLE ANIMATION */
 .container {
+  padding: 1em;
+  box-sizing: border-box;
+
   min-width: 100px;
   max-width: 100px;
   border: solid 1px black;
@@ -40,7 +43,7 @@
   transform: translate(0, -200px);
 }
 
-.container:hover {
+.app-body__block:hover {
   .screen-one {
     animation: screen1 5s infinite;
   }

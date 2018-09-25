@@ -4,8 +4,27 @@ import Logo from './logo.svg';
 import './App.css';
 // import triangle from './assets/triangle.svg';
 import TriangleLogo from './assets/triangle';
+import Project1 from './components/project1';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      projectState: '',
+    }
+
+    this.toggleProject = this.toggleProject.bind(this);
+  }
+
+  toggleProject() {
+    console.log('lol')
+    if(this.state.projectState) {
+      this.setState({projectState: ''});
+    } else {
+      this.setState({projectState: 'true'});
+    }
+  }
+
   render() {
     return (
       <div className="App">
@@ -34,13 +53,19 @@ class App extends Component {
 
           </div>
           <div className="app-body__block"></div>
-          <div className="app-body__block">
+          <div className="app-body__block" onClick={this.toggleProject}>
             <TriangleLogo className='App-logo' ariaLabel='logo' />
           </div>
           <div className="app-body__block"></div>
           <div className="app-body__block"></div>
           <div className="app-body__block"></div>
         </div>
+
+        <Project1 
+          className={
+            this.state.projectState ? 'projects' : 'projects--hide'
+          }
+        />
         {/* <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p> */}
