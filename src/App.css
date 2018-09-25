@@ -55,25 +55,134 @@ a {
 }
 
 .app-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
   width: 100%;
   height: 100%;
 
-  background-color: #222;
-  color: white;
+  background-color: white;
+  color: black;
   
   padding: 20px;
   box-sizing: border-box;
 }
 
-/* .App-title {
-  font-size: 1.5em;
+.app-body__block {
+  border: solid 1px black;
 }
-
-.App-intro {
-  font-size: large;
-} */
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/* TRIANGLE ANIMATION */
+.triangle_lamp {
+  /* fill: blue; */
+}
+
+.container {
+  max-width: 10%;
+  border: solid 1px black;
+}
+
+.cls-2 {
+  fill: grey;
+}
+
+.block-one, .block-two, .block-three {
+  shape-rendering: geometricPrecision;
+}
+
+.screen-one {
+  fill: lightgrey;
+  animation: screen1 5s infinite;
+  transform: translate(0, -30px);
+}
+
+.screen-two {
+  fill: lightgrey;
+  transform: translate(0, -200px);
+  animation: screen2 5s infinite;
+}
+
+.screen-three {
+  fill: lightgrey;
+  transform: translate(0, -200px);
+  animation: screen3 5s infinite;
+}
+
+.block-one {
+  animation: box1 5s infinite;
+  transform: translate(0, -55px);
+}
+
+.block-two {
+  animation: box2 5s infinite;
+  transform: translate(0, -200px);
+}
+
+.block-three {
+  transform: translate(0, -200px);
+  animation: box3 5s infinite;
+}
+
+@keyframes screen1 {
+  0% { fill: lightgrey; transform: translate(0, -55px); }
+  20% { transform: translate(0, -55px); }
+  37% { fill: lightgrey; transform: translate(0, 0); }
+  40% { fill: yellow; }
+  85% { fill: yellow; }
+  88% { fill: lightgrey; transform: translate(0, 0); }
+  100% { transform: translate(0, -55px); }
+}
+
+@keyframes screen2 {
+  0% { transform: translate(0, -200px); }
+  25% { transform: translate(0, -200px); }
+  37% { fill: lightgrey; }
+  40% { fill: yellow; transform: translate(0, 0); }
+  85% { fill: yellow; transform: translate(0, 0); }
+  88% { fill: lightgrey; }
+  95% { transform: translate(0, -200);  }
+  100% { transform: translate(0, -200);  }
+}
+
+@keyframes screen3 {
+  0% { transform: translate(0, -200px);  }
+  50% { transform: translate(0, -200px);  }
+  62% { fill: lightgrey; }
+  65% { fill: yellow; transform: translate(0, 0); }
+  80% { fill: yellow; transform: translate(0, 0); }
+  83% { fill: lightgrey; }
+  100% { transform: translate(0, -200); }
+}
+
+@keyframes box1 {
+  0% { transform: translate(0, -55px); }
+  20% { transform: translate(0, -55px); }
+  37% { transform: translate(0, 0); }
+/*   85% { transform: translate(0, 0); } */
+  88% { transform: translate(0, 0); }
+  100 { trasnform: translate(0, -55px); }
+}
+
+@keyframes box2 {
+  0% { transform: translate(0, -200px); }
+  25% { transform: translate(0, -200px); }
+  40% { transform: translate(0, 0); }
+  85% { transform: translate(0, 0); }
+  95% { transform: translate(0, -200); }
+  100% { transform: translate(0, -200); }
+}
+
+@keyframes box3 {
+  0% { transform: translate(0, -200px); }
+  50% { transform: translate(0, -200px); }
+  65% { transform: translate(0, 0); }
+  80% { transform: translate(0, 0); }
+  100% { transform: translate(0, -200); }
+}
+
+/* TRIANGLE ANIMATION END */
