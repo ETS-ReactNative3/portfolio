@@ -4,24 +4,25 @@ import Logo from './logo.svg';
 import './App.css';
 // import triangle from './assets/triangle.svg';
 import TriangleLogo from './assets/triangle';
-import Project1 from './components/project1';
+import Project from './components/projects';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      projectState: '',
+      projectShowing: false,
+      currentProject: '',
     }
 
     this.toggleProject = this.toggleProject.bind(this);
   }
 
-  toggleProject() {
-    console.log('lol')
-    if(this.state.projectState) {
-      this.setState({projectState: ''});
+  toggleProject(projectNum) {
+    if(this.state.projectShowing) {
+      this.setState({projectShowing: false});
     } else {
-      this.setState({projectState: 'true'});
+      this.setState({currentProject: `${projectNum}`});
+      this.setState({projectShowing: true});
     }
   }
 
@@ -52,19 +53,18 @@ class App extends Component {
             </svg> */}
 
           </div>
-          <div className="app-body__block"></div>
-          <div className="app-body__block" onClick={this.toggleProject}>
+          <div className="app-body__block" onClick={() => this.toggleProject('2')}></div>
+          <div className="app-body__block" onClick={() => this.toggleProject('3')}>
             <TriangleLogo className='App-logo' ariaLabel='logo' />
           </div>
           <div className="app-body__block"></div>
           <div className="app-body__block"></div>
           <div className="app-body__block"></div>
         </div>
-
-        <Project1 
-          className={
-            this.state.projectState ? 'projects' : 'projects--hide'
-          }
+        <Project
+          className={this.state.projectShowing ? 'project project--show' : 'project project--hide'}
+          currentProject={this.state.currentProject}
+          toggleProject={this.toggleProject}
         />
         {/* <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.

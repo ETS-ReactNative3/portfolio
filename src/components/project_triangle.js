@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 
-class Project1 extends Component {
+class ProjectTriangle extends Component {
   constructor(props, context) {
     super(props, context);
   }
 
 	render() {
 		return (
-			<div className={this.props.className}>
-        I am project 1 container
+			<div>
+        this is the triangle project
       </div>
 		)
 	}
 }
 
-export default Project1;
+export default ProjectTriangle;
