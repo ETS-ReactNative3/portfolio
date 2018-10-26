@@ -10,9 +10,9 @@ class Project1 extends Component {
   }
 
   chooseProject(projectNumber) {
-    if (projectNumber === '2') {
+    if (projectNumber === 'Werewolf') {
       return <ProjectWerewolf />
-    } else if (projectNumber === '3') {
+    } else if (projectNumber === 'Triangle') {
       return <ProjectTriangle />
     } else {
       return <div>Nothing</div>
@@ -22,8 +22,8 @@ class Project1 extends Component {
 	render() {
 		return (
 			<div className={this.props.className}>
-        <button onClick={this.props.toggleProject}>Close</button>
-        I am project {this.props.currentProject} container
+        <button className="project__close-button" onClick={this.props.toggleProject}>X</button>
+        <h1 className="project__title">{this.props.currentProject}</h1>
         {this.chooseProject(this.props.currentProject)}
       </div>
 		)

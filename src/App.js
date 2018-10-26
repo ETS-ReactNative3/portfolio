@@ -17,11 +17,11 @@ class App extends Component {
     this.toggleProject = this.toggleProject.bind(this);
   }
 
-  toggleProject(projectNum) {
+  toggleProject(projectName) {
     if(this.state.projectShowing) {
       this.setState({projectShowing: false});
     } else {
-      this.setState({currentProject: `${projectNum}`});
+      this.setState({currentProject: `${projectName}`});
       this.setState({projectShowing: true});
     }
   }
@@ -53,8 +53,8 @@ class App extends Component {
             </svg> */}
 
           </div>
-          <div className="app-body__block" onClick={() => this.toggleProject('2')}></div>
-          <div className="app-body__block" onClick={() => this.toggleProject('3')}>
+          <div className="app-body__block" onClick={() => this.toggleProject('Werewolf')}></div>
+          <div className="app-body__block" onClick={() => this.toggleProject('Triangle')}>
             <TriangleLogo className='App-logo' ariaLabel='logo' />
           </div>
           <div className="app-body__block"></div>
