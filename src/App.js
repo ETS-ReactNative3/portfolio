@@ -44,6 +44,8 @@ class App extends Component {
         <div className="app-body">
           {/* <h1 className="App-title">Welcome to React</h1> */}
           <div className="app-body__block">
+            <p className="app-body__number">Random</p>
+
             {/* <svg
               className="triangle_lamp"
               title="triangle_lamp"
@@ -53,13 +55,25 @@ class App extends Component {
             </svg> */}
 
           </div>
-          <div className="app-body__block" onClick={() => this.toggleProject('Werewolf')}></div>
+          <div className="app-body__block" onClick={() => this.toggleProject('Werewolf')}>
+            <p className="app-body__number">Werewolf</p>          
+          </div>
           <div className="app-body__block" onClick={() => this.toggleProject('Triangle')}>
+            <p className="app-body__number">Triangle</p>
             <TriangleLogo className='App-logo' ariaLabel='logo' />
           </div>
-          <div className="app-body__block"></div>
-          <div className="app-body__block"></div>
-          <div className="app-body__block"></div>
+          <div className="app-body__block">
+            <p className="app-body__number">4</p>                      
+          </div>
+          <div className="app-body__block">
+            <p className="app-body__number">5</p>                      
+          </div>
+          <div className="app-body__block">
+            <p className="app-body__number">6</p>                      
+          </div>
+          <div className="app-body__block">
+            <p className="app-body__number">7</p>                      
+          </div>
         </div>
         <Project
           className={this.state.projectShowing ? 'project project--show' : 'project project--hide'}

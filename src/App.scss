@@ -3,6 +3,7 @@
 }
 
 h1, h2, h3 {
+  text-align: center;
   font-weight: lighter;
 }
 
@@ -69,19 +70,18 @@ a {
 .app-body {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 5em;
+  // grid-template-rows: repeat(3, 1fr);
+  grid-gap: 3em;
 
   width: 100%;
-  height: 100%;
+  // height: 100%;
 
   background-color: white;
   color: black;
   
   padding: 5em;
-  padding-left: 10em;
+  overflow: auto;
   box-sizing: border-box;
-
 }
 
 .app-body__block {
@@ -89,7 +89,19 @@ a {
   justify-content: center;
   align-items: center;
 
-  border: solid 1px black;
+  // border: solid 1px black;
+  background-color: lavender;
+
+  min-height: 250px;
+  position: relative;
+}
+
+.app-body__number {
+  position: absolute;
+  left: -5%;
+  top: -20%;
+  margin: 0;
+  font-size: 4em;
 }
 
 @keyframes App-logo-spin {
@@ -106,7 +118,7 @@ a {
   width: calc(100% - 300px);
   height: 100%;
 
-  padding: 2em;
+  padding: 3em;
   box-sizing: border-box;
   box-shadow: 2px 0px 11px -1px black;
 
@@ -119,19 +131,22 @@ a {
 }
 
 .project__content {
-  padding: 0 10em;
+  margin: 0 auto;
+  max-width: 720px;
 }
 
 .project__close-button {
   position: absolute;
   background: none;
-  margin-top: 4px;
-  margin-left: 10px;
+  margin-top: 6px;
+  padding: 0;
   border: 0;
   font-size: 1.5em;
 }
 
 .project__collaborators {
+  text-align: center;
+
   p {
     line-height: 1em;
   }
@@ -139,6 +154,10 @@ a {
 
 .project__image {
   width: 100%;
+}
+
+.project__video {
+  margin-top: 2em;
 }
 
 .project--hide {

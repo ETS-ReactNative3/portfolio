@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Image1 from './../assets/triangle/1.jpg';
-import Image5 from './../assets/triangle/5.jpg';
+import Image1 from './../assets/triangle/1b.jpg';
+import Image5 from './../assets/triangle/5b.jpg';
 
 class ProjectTriangle extends Component {
   constructor(props, context) {
@@ -10,10 +10,10 @@ class ProjectTriangle extends Component {
 	render() {
 		return (
 			<div className="project__content">
-				<img className="project__image" src={Image1} />
 				<p>
 					Tri-Angle is 3 triangular/modular lamps that can be placed at different angles. Tri-Angle consists of three tri-angular shaped pieces that lights up when another modular piece is connected with it.
 				</p>
+				<img className="project__image" src={Image1} />
 
 				<h2>Role</h2>
 				<p>
@@ -32,7 +32,7 @@ class ProjectTriangle extends Component {
 					<p>Nicky Fung</p>
 				</div>
 
-				<iframe width="100%" height="315" src="https://www.youtube.com/embed/AkVmbeIwZDE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<iframe className="project__video" width="100%" height="315" src="https://www.youtube.com/embed/AkVmbeIwZDE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			</div>
 		)
 	}
