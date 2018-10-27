@@ -1,0 +1,47 @@
+{
+    "plugins": [
+        "stylelint-order"
+    ],
+    "rules": {
+        "block-no-empty": null,
+        "color-no-invalid-hex": true,
+        "comment-empty-line-before": [ "always", {
+        "ignore": ["stylelint-commands", "after-comment"]
+        } ],
+        "declaration-colon-space-after": "always",
+        "max-empty-lines": 2,
+        "rule-empty-line-before": [ "always", {
+        "except": ["first-nested"],
+        "ignore": ["after-comment"]
+        } ],
+        "unit-whitelist": ["em", "rem", "%", "s", "px"],
+        "order/properties-order": [
+            "display",
+            "position",
+            "top",
+            "bottom",
+            "left",
+            "right",        
+            "width",
+            "height",
+            "margin",
+            "margin-top",
+            "margin-bottom",
+            "margin-left",
+            "margin-right",
+            "padding",
+            "box-sizing",
+            "overflow",
+            "overflow-x",
+            "overflow-y",
+
+            "background",
+            "background-color",
+            "color",
+            "font-size",
+            "font-weight",
+            "transition",
+
+        ],
+    }
+}

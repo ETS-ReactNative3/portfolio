@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import Banner from './../assets/werewolf/banner.jpg';
 import Image1 from './../assets/werewolf/1.JPG';
-
+import Image2 from './../assets/werewolf/2.JPG';
+import Mobile1 from './../assets/werewolf/m1.JPG';
+import Mobile2 from './../assets/werewolf/m2.JPG';
+import Mobile3 from './../assets/werewolf/m3.JPG';
 
 class ProjectWerewolf extends Component {
   constructor(props, context) {
@@ -10,29 +14,28 @@ class ProjectWerewolf extends Component {
 	render() {
 		return (
       <div className="project__content">
+        <img className="project__image" src={Banner} />
+
         <p>
-          Tri-Angle is 3 triangular/modular lamps that can be placed at different angles. Tri-Angle consists of three tri-angular shaped pieces that lights up when another modular piece is connected with it.
+          Werewolf is a web application adaption to the popular social game Werewolf and Mafia.
         </p>
+
+        <p>
+          Currently there are 3 roles, the Werewolf, the Seer, and the Villagers. Every night each special roledoes an action hidden from players with different roles. The werewolves will select a person to kill and the seer will identify a role of a player.
+        </p>
+
+        <p>
+          During day time, the villagers and the seer must do their best to uncover the werewolves and lynch themwhile the werewolves must eliminate all the villagers.
+        </p>
+
         <img className="project__image" src={Image1} />
-
-        <h2>Role</h2>
-        <p>
-          For this project, I was in charge of the prototyping and designing of the lamp. I diagramed the plans out for the lamp and laser cutted them out in a workshop. I also did 3-D Models to do an exploded view of the Tri-Angle lamp. I also made a poster to showcase our lamp at the SFU showcase and at the Vancouver Maker Faire.
-        </p>
-        <p>
-          Please check out our <a href="https://iat336teamnegatron.wordpress.com">team blog</a> for a more indepth look of the process and behind the scenes!
-        </p>
-
-        {/* <img className="project__image" src={Image5} /> */}
-
-        <div class="project__collaborators">
-          <h3>Collaborators</h3>
-          <p>Bobby Soetarto</p>
-          <p>Amanda Mutsaerts</p>
-          <p>Nicky Fung</p>
+        <img className="project__image" src={Image2} />
+        
+        <div className="project__mobile-container">
+          <img className="project__mobile-image" src={Mobile1} />
+          <img className="project__mobile-image" src={Mobile3} />
+          <img className="project__mobile-image" src={Mobile2} />
         </div>
-
-        <iframe className="project__video" width="100%" height="315" src="https://www.youtube.com/embed/AkVmbeIwZDE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
 		)
 	}

@@ -34,8 +34,8 @@ html, body, #root {
 
 .nav__menu {
   display: flex;
-  justify-content: flex-end;
   flex-direction: column;
+  justify-content: flex-end;
   
   height: 100%;
   
@@ -56,9 +56,9 @@ a {
 
 .App {
   display: flex;
+  position: relative;
   height: 100%;
 
-  position: relative;
   overflow: hidden;
 }
 
@@ -74,34 +74,73 @@ a {
   grid-gap: 3em;
 
   width: 100%;
-  // height: 100%;
+  padding: 5em;
+  box-sizing: border-box;
+  overflow: auto;
 
   background-color: white;
   color: black;
-  
-  padding: 5em;
-  overflow: auto;
-  box-sizing: border-box;
 }
 
 .app-body__block {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
 
-  // border: solid 1px black;
-  background-color: lavender;
+  // border: solid 1px white;
+  // outline: solid 1px black;
+  background-color: #f1f1f1;
 
   min-height: 250px;
-  position: relative;
+  box-shadow: 1px 1px 3px 1px lightgrey;
+  transition: all 0.4s;
+
+  &:hover {
+    box-shadow: 1px 1px 10px 1px grey;
+  }
+
+  .inner {
+    position: absolute;
+    background-color: black;
+  }
+
+  .top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+  }
+
+  .bottom {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+  }
+
+  .left {
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+  }
+
+  .right {
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+  }
 }
 
 .app-body__number {
   position: absolute;
-  left: -5%;
-  top: -20%;
+  top: 5px;
+  left: 12px;
   margin: 0;
-  font-size: 3em;
+  font-size: 1em;
+  text-transform: uppercase;
 }
 
 @keyframes App-logo-spin {
@@ -111,18 +150,17 @@ a {
 
 .project {
   position: absolute;
-  transition: 0.6s all ease-in-out;
-
-  background: white;
-
+  
   width: calc(100% - 300px);
   height: 100%;
-
   padding: 3em;
   box-sizing: border-box;
-  box-shadow: 2px 0px 11px -1px black;
-
   overflow-y: auto;
+
+  background: white;
+    
+  transition: 0.6s all ease-in-out;
+  box-shadow: 2px 0px 11px -1px black;
 }
 
 .project__title {
@@ -131,17 +169,18 @@ a {
 }
 
 .project__content {
-  margin: 0 auto;
   max-width: 720px;
+  margin: 0 auto;
 }
 
 .project__close-button {
   position: absolute;
-  background: none;
   margin-top: 6px;
   padding: 0;
-  border: 0;
+  
+  background: none;
   font-size: 1.5em;
+  border: 0;
 }
 
 .project__collaborators {
@@ -154,6 +193,17 @@ a {
 
 .project__image {
   width: 100%;
+  margin: 1em 0;
+}
+
+.project__mobile-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project__mobile-image {
+  width: 33%;
+  align-self: center;
 }
 
 .project__video {

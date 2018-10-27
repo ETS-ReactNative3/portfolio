@@ -22,5 +22,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "stylelint": "^9.6.0",
+    "stylelint-order": "^1.0.0"
   }
 }

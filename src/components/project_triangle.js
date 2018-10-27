@@ -25,7 +25,7 @@ class ProjectTriangle extends Component {
 
 				<img className="project__image" src={Image5} />
 
-				<div class="project__collaborators">
+				<div className="project__collaborators">
 					<h3>Collaborators</h3>
 					<p>Bobby Soetarto</p>
 					<p>Amanda Mutsaerts</p>
