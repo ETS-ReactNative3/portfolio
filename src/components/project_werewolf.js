@@ -5,6 +5,13 @@ import Image2 from './../assets/werewolf/2.JPG';
 import Mobile1 from './../assets/werewolf/m1.JPG';
 import Mobile2 from './../assets/werewolf/m2.JPG';
 import Mobile3 from './../assets/werewolf/m3.JPG';
+import Mobile4 from './../assets/werewolf/m4.JPG';
+import Mobile5 from './../assets/werewolf/m5.JPG';
+import Mobile6 from './../assets/werewolf/m6.JPG';
+import Mobile7 from './../assets/werewolf/m7.JPG';
+import Mobile8 from './../assets/werewolf/m8.JPG';
+import Mobile9 from './../assets/werewolf/m9.JPG';
+
 
 class ProjectWerewolf extends Component {
   constructor(props, context) {
@@ -33,8 +40,20 @@ class ProjectWerewolf extends Component {
         
         <div className="project__mobile-container">
           <img className="project__mobile-image" src={Mobile1} />
-          <img className="project__mobile-image" src={Mobile3} />
           <img className="project__mobile-image" src={Mobile2} />
+          <img className="project__mobile-image" src={Mobile3} />
+        </div>
+
+        <div className="project__mobile-container">
+          <img className="project__mobile-image" src={Mobile4} />
+          <img className="project__mobile-image" src={Mobile5} />
+          <img className="project__mobile-image" src={Mobile6} />
+        </div>
+
+        <div className="project__mobile-container">
+          <img className="project__mobile-image" src={Mobile7} />
+          <img className="project__mobile-image" src={Mobile8} />
+          <img className="project__mobile-image" src={Mobile9} />
         </div>
       </div>
 		)

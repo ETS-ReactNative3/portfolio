@@ -4,11 +4,15 @@
 
 h1, h2, h3 {
   text-align: center;
-  font-weight: lighter;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1em;
 }
 
 p {
-  font-size: 0.9em;
+  font-size: 14px;
   line-height: 2em;
 }
 
@@ -69,7 +73,8 @@ a {
 
 .app-body {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  // grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   // grid-template-rows: repeat(3, 1fr);
   grid-gap: 3em;
 
@@ -93,16 +98,17 @@ a {
   background-color: #f1f1f1;
 
   min-height: 250px;
-  box-shadow: 1px 1px 3px 1px lightgrey;
+  max-width: 500px;
+  box-shadow: 1px 1px 3px 1px #bfbfbf;
   transition: all 0.4s;
 
   &:hover {
-    box-shadow: 1px 1px 10px 1px grey;
+    box-shadow: 1px 1px 10px 1px #bfbfbf;
   }
 
   .inner {
     position: absolute;
-    background-color: black;
+    // background-color: black;
   }
 
   .top {
@@ -143,6 +149,12 @@ a {
   text-transform: uppercase;
 }
 
+.logo-container {
+  padding: 1em;
+  box-sizing: border-box;
+  // border: solid 1px black;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -166,6 +178,7 @@ a {
 .project__title {
   margin-top: 0;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .project__content {
@@ -183,22 +196,43 @@ a {
   border: 0;
 }
 
-.project__collaborators {
+.project__collab-skills {
+  display: flex;
   text-align: center;
-
+  
   p {
     line-height: 1em;
   }
 }
 
+.project__collaborators, .project__skills-used {
+  width: 100%;
+}
+
+.project__image-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .project__image {
   width: 100%;
   margin: 1em 0;
+  align-self: center;
+
+  &--half {
+    width: 48%;
+  }
+}
+
+.project__image-caption {
+  text-align: center;
 }
 
 .project__mobile-container {
   display: flex;
   justify-content: space-between;
+
+  margin: 1em 0;
 }
 
 .project__mobile-image {

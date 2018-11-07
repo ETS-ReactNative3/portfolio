@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import ProjectTriangle from './project_triangle';
 import ProjectWerewolf from './project_werewolf';
 import ProjectFanswifi from './project_fanswifi';
+import ProjectCodedrillz from './project_codedrillz';
+import ProjectNauticalcats from './project_nauticalcats';
+import ProjectRediscoverindigo from './project_rediscoverindigo';
+
+
 
 class Project1 extends Component {
   constructor(props, context) {
@@ -11,13 +16,6 @@ class Project1 extends Component {
   }
 
   chooseProject(projectNumber) {
-    // if (projectNumber === 'Werewolf') {
-    //   return <ProjectWerewolf />
-    // } else if (projectNumber === 'Triangle') {
-    //   return <ProjectTriangle />
-    // } else {
-    //   return <div>Nothing</div>
-    // }
 
     switch(projectNumber) {
       case 'Werewolf':
@@ -28,6 +26,15 @@ class Project1 extends Component {
         break;
       case 'Fanswifi':
         return <ProjectFanswifi />
+        break;
+      case 'Codedrillz':
+        return <ProjectCodedrillz />
+        break;
+      case 'Nauticalcats':
+        return <ProjectNauticalcats />
+        break;
+      case 'Rediscover Indigo':
+        return <ProjectRediscoverindigo />
         break;
       default:
         return <div>Nothing</div>

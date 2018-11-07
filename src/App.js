@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Logo from './logo.svg';
 import './App.css';
-// import triangle from './assets/triangle.svg';
 import TriangleLogo from './assets/triangle';
+import FanswifiLogo from './assets/fanswifi';
+import WerewolfLogo from './assets/werewolf';
+import CodedrillzLogo from './assets/codedrillz';
+import IndigoLogo from './assets/indigo';
+import NauticalLogo from './assets/nautical';
 import Project from './components/projects';
 
 class App extends Component {
@@ -48,29 +51,31 @@ class App extends Component {
           {/* <h1 className="App-title">Welcome to React</h1> */}
           <div className="app-body__block" onClick={() => this.toggleProject('Fanswifi')}>
             <p className="app-body__number">Fanswifi</p>
+            <FanswifiLogo className='App-logo' ariaLabel='logo' />
             <div className="inner top"></div>
             <div className="inner bottom"></div>
             <div className="inner left"></div>
             <div className="inner right"></div>
           </div>
           <div className="app-body__block" onClick={() => this.toggleProject('Werewolf')}>
-            <p className="app-body__number">Werewolf</p>          
+            <p className="app-body__number">Werewolf</p>  
+            <WerewolfLogo className='App-logo' ariaLabel='logo' />        
           </div>
           <div className="app-body__block" onClick={() => this.toggleProject('Triangle')}>
             <p className="app-body__number">Triangle</p>
             <TriangleLogo className='App-logo' ariaLabel='logo' />
           </div>
-          <div className="app-body__block">
-            <p className="app-body__number">CodeDrillz</p>                      
+          <div className="app-body__block" onClick={() => this.toggleProject('Codedrillz')}>
+            <p className="app-body__number">CodeDrillz</p>      
+            <CodedrillzLogo className='App-logo' ariaLabel='logo' />                
           </div>
-          <div className="app-body__block">
-            <p className="app-body__number">Rediscover Indigo</p>                      
+          <div className="app-body__block" onClick={() => this.toggleProject('Rediscover Indigo')}>
+            <p className="app-body__number">Rediscover Indigo</p>   
+            <IndigoLogo className='App-logo' ariaLabel='logo' />                     
           </div>
-          <div className="app-body__block">
-            <p className="app-body__number">Nautical Cats</p>                      
-          </div>
-          <div className="app-body__block">
-            <p className="app-body__number">7</p>                      
+          <div className="app-body__block" onClick={() => this.toggleProject('Nauticalcats')}>
+            <p className="app-body__number">Nautical Cats</p> 
+            <NauticalLogo className='App-logo' ariaLabel='logo' />                
           </div>
         </div>
         <Project

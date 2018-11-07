@@ -25,11 +25,20 @@ class ProjectTriangle extends Component {
 
 				<img className="project__image" src={Image5} />
 
-				<div className="project__collaborators">
-					<h3>Collaborators</h3>
-					<p>Bobby Soetarto</p>
-					<p>Amanda Mutsaerts</p>
-					<p>Nicky Fung</p>
+				<div className="project__collab-skills">
+					<div className="project__collaborators">
+						<h3>Collaborators</h3>
+						<p>Bobby Soetarto</p>
+						<p>Amanda Mutsaerts</p>
+						<p>Nicky Fung</p>
+					</div>
+
+					<div className="project__skills-used">
+						<h3>Technologies Used</h3>
+						<p>Illustrator</p>
+						<p>Corel Draw</p>
+						<p>Solid Works</p>
+					</div>
 				</div>
 
 				<iframe className="project__video" width="100%" height="315" src="https://www.youtube.com/embed/AkVmbeIwZDE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

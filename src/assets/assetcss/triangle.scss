@@ -1,11 +1,7 @@
 /* TRIANGLE ANIMATION */
-.container {
-  padding: 1em;
-  box-sizing: border-box;
-
+.logo-container--triangle {
   min-width: 100px;
   max-width: 100px;
-  border: solid 1px black;
 }
 
 .cls-2 {
@@ -45,27 +41,27 @@
 
 .app-body__block:hover {
   .screen-one {
-    animation: screen1 5s infinite;
+    animation: screen1 3s infinite;
   }
   
   .screen-two {
-    animation: screen2 5s infinite;
+    animation: screen2 3s infinite;
   }
   
   .screen-three {
-    animation: screen3 5s infinite;
+    animation: screen3 3s infinite;
   }
   
   .block-one {
-    animation: box1 5s infinite;
+    animation: box1 3s infinite;
   }
   
   .block-two {
-    animation: box2 5s infinite;
+    animation: box2 3s infinite;
   }
   
   .block-three {
-    animation: box3 5s infinite;
+    animation: box3 3s infinite;
   }
 }
 
@@ -104,7 +100,6 @@
   0% { transform: translate(0, -55px); }
   20% { transform: translate(0, -55px); }
   37% { transform: translate(0, 0); }
-/*   85% { transform: translate(0, 0); } */
   88% { transform: translate(0, 0); }
   100% { trasnform: translate(0, -55px); }
 }
