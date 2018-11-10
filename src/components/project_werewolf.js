@@ -35,6 +35,18 @@ class ProjectWerewolf extends Component {
           During day time, the villagers and the seer must do their best to uncover the werewolves and lynch themwhile the werewolves must eliminate all the villagers.
         </p>
 
+        <a className="project__button" href="https://github.com/jshchui/fwnext" target="_blank">
+          Github
+        </a>
+
+        <div className="project__skills-used">
+          <h3>Technologies Used</h3>
+          <p>ReactJS</p>
+          <p>Firebase Realtime Database</p>
+          <p>Fireblase Cloud Functions</p>
+          <p>Illustrator</p>
+        </div>
+
         <img className="project__image" src={Image1} />
         <img className="project__image" src={Image2} />
         

@@ -23,6 +23,17 @@ class ProjectFanswifi extends Component {
           For their exhibition in Singapore, I redesigned and developed their website to clearly articulate business values to their clients.
         </p>
 
+        <a className="project__button" href="https://github.com/jshchui/fwnext" target="_blank">
+          Github
+        </a>
+
+        <div className="project__skills-used">
+          <h3>Technologies Used</h3>
+          <p>Photoshop</p>
+          <p>Illustrator</p>
+          <p>HTML/CSS/JQuery</p>
+        </div>
+
         <img className="project__image" src={ImgWhois} />
         <img className="project__image" src={ImgProduct} />
         <img className="project__image" src={ImgWhitelabeling} />

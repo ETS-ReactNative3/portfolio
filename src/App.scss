@@ -28,12 +28,28 @@ html, body, #root {
   min-width: 300px;
   height: 100%;
 
+  padding: 5em 2em 5em 6em;
+
+  // padding: 5em 3em;
+  box-sizing: border-box;
+
   background-color: #fff;
+  transition: 0.4s all;
+
+  // box-shadow: 1px 1px 4px 1px lightgrey;
+  z-index: 1;
 }
 
 .nav__logo {
-  text-align: center;
-  padding-top: 2em;
+  // text-align: center;
+
+  h3 {
+    margin: 0;
+    color: grey;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 }
 
 .nav__menu {
@@ -42,20 +58,33 @@ html, body, #root {
   justify-content: flex-end;
   
   height: 100%;
-  
 }
 
 .nav__menu-item {
-  text-align: center;
-  padding: 0 0 3em 0;
+  // text-align: center;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
 }
 
 .nav__menu-item li {
-  padding: 0.5em 1em;
+  padding: 0.5em 0;
+  font-weight: bold;
+
+  a { 
+    color: grey;
+  }
 }
 
 a {
   text-decoration: none;
+}
+
+.hamburger__button {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .App {
@@ -99,8 +128,12 @@ a {
 
   min-height: 250px;
   max-width: 500px;
-  box-shadow: 1px 1px 3px 1px #bfbfbf;
+  // box-shadow: 1px 1px 3px 1px #bfbfbf;
   transition: all 0.4s;
+
+  justify-self: center;
+  width: 100%;
+  // min-width: 80%;
 
   &:hover {
     box-shadow: 1px 1px 10px 1px #bfbfbf;
@@ -186,27 +219,48 @@ a {
   margin: 0 auto;
 }
 
+.project__button {
+  display: block;
+  margin: 3em auto;
+  max-width: 100px;
+  padding: 0.5em 2em;
+  text-align: center;
+  box-shadow: 1px 1px 5px 1px grey;
+
+  &:hover {
+    box-shadow: 1px 1px 10px 1px grey;
+  }
+}
+
 .project__close-button {
-  position: absolute;
-  margin-top: 6px;
+  position: fixed;
+  fill: grey;
   padding: 0;
   
   background: none;
-  font-size: 1.5em;
   border: 0;
+}
+
+.project__close-button-svg {
+  background: white;
+  border-radius: 50%;
+  padding: 1em;
+
+  box-shadow: 1px 1px 5px -1px grey;
 }
 
 .project__collab-skills {
   display: flex;
   text-align: center;
-  
-  p {
-    line-height: 1em;
-  }
 }
 
 .project__collaborators, .project__skills-used {
   width: 100%;
+  text-align: center;
+
+  p {
+    line-height: 1em;
+  }
 }
 
 .project__image-container {
@@ -250,4 +304,59 @@ a {
 
 .project--show {
   right: 0;
+}
+
+.project__scroll-top {
+  margin: 0 auto;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    box-sizing: content-box;
+    display: block;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    box-shadow: 1px 1px 5px -1px grey;
+}
+
+@media(max-width: 800px) {
+  .nav {
+    position: absolute;
+    left: -100%;
+
+    padding: 2em;
+  
+    &--show-mobile {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  .App {
+    flex-direction: column;
+  }
+  
+  .app-body {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    padding: 5em 1em;
+  }
+
+  .hamburger__button {
+    display: block;
+    width: 25px;
+    margin: 1em 1.5em;
+    padding: 1em;
+    box-sizing: content-box;
+    fill: grey;
+    background: none;
+    border: none;
+  }
+
+  .project {
+    width: 100%;
+
+    &--hide {
+      right: -100%;
+    }
+  }
 }
