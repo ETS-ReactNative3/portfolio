@@ -72,7 +72,7 @@ class App extends Component {
           <div className="nav__menu" onClick={() => this.toggleProject('nothing')}>
             <ul className="nav__menu-item">
               {/* <li><a href="">Work</a></li> */}
-              <li><a href="https://jshchui.github.io/img/resume.pdf">Resume</a></li>
+              <li><a href="./assets/resume.pdf" target="_blank">Resume</a></li>
               <li><a onClick={() => this.toggleProject('Contact Page')}>Contact</a></li>
             </ul>
           </div>
