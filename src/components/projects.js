@@ -5,6 +5,7 @@ import ProjectFanswifi from './project_fanswifi';
 import ProjectCodedrillz from './project_codedrillz';
 import ProjectNauticalcats from './project_nauticalcats';
 import ProjectRediscoverindigo from './project_rediscoverindigo';
+import ContactPage from './contact';
 
 
 
@@ -36,6 +37,10 @@ class Project1 extends Component {
       case 'Rediscover Indigo':
         return <ProjectRediscoverindigo />
         break;
+      case 'Contact Page':
+        console.log('returning contact page');
+        return <ContactPage />
+        break;
       default:
         return <div>Nothing</div>
     }
@@ -43,7 +48,7 @@ class Project1 extends Component {
 
 	render() {
 		return (
-			<div className={this.props.className}>
+			<div className={this.props.className} ref={this.props.projectRef}>
         <button className="project__close-button" onClick={this.props.toggleProject}>
           <svg id="Layer_1" className="project__close-button-svg" data-name="Layer 1" viewBox="0 0 19.49 19.49">
             <rect x="947.17" y="540.36" width="25" height="2.56" transform="translate(-1051.84 305.33) rotate(-45)"/>

@@ -12,6 +12,9 @@ import Project from './components/projects';
 class App extends Component {
   constructor(props) {
     super(props);
+
+    this.projectContainerRef = React.createRef();
+
     this.state = {
       projectShowing: false,
       currentProject: '',
@@ -19,6 +22,8 @@ class App extends Component {
     }
 
     this.toggleProject = this.toggleProject.bind(this);
+    this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
+    this.scrollTop = this.scrollTop.bind(this);
   }
 
   toggleProject(projectName) {
@@ -41,7 +46,10 @@ class App extends Component {
   }
 
   scrollTop() {
-    console.log('scrolling top');
+    this.projectContainerRef.current.scrollTo({
+      top: this.projectContainerRef.current.offsetTop,
+      behavior: "smooth"
+    })
   }
 
   render() {
@@ -65,7 +73,7 @@ class App extends Component {
             <ul className="nav__menu-item">
               {/* <li><a href="">Work</a></li> */}
               <li><a href="https://jshchui.github.io/img/resume.pdf">Resume</a></li>
-              <li><a href="">Contact</a></li>
+              <li><a onClick={() => this.toggleProject('Contact Page')}>Contact</a></li>
             </ul>
           </div>
         </div>
@@ -112,6 +120,7 @@ class App extends Component {
           currentProject={this.state.currentProject}
           toggleProject={this.toggleProject}
           scrollTop={this.scrollTop}
+          projectRef={this.projectContainerRef}
         />
         {/* <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.

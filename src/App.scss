@@ -193,6 +193,12 @@ a {
   to { transform: rotate(360deg); }
 }
 
+.profile-img {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+}
+
 .project {
   position: absolute;
   
@@ -239,6 +245,8 @@ a {
   
   background: none;
   border: 0;
+
+  transition: all 0.4s;
 }
 
 .project__close-button-svg {
@@ -307,16 +315,16 @@ a {
 }
 
 .project__scroll-top {
-  margin: 0 auto;
-    width: 25px;
-    height: 25px;
-    padding: 10px;
-    box-sizing: content-box;
-    display: block;
-    border-radius: 50%;
-    border: none;
-    background: white;
-    box-shadow: 1px 1px 5px -1px grey;
+  margin: 1em auto;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  box-sizing: content-box;
+  display: block;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  box-shadow: 1px 1px 5px -1px grey;
 }
 
 @media(max-width: 800px) {
@@ -330,6 +338,11 @@ a {
       width: 100%;
       left: 0;
     }
+  }
+
+  .nav__menu {
+    justify-content: center;
+    text-align: center;
   }
 
   .App {
@@ -354,9 +367,31 @@ a {
 
   .project {
     width: 100%;
+    padding: 1em;
+    z-index: 1;
 
     &--hide {
       right: -100%;
+
+      .project__close-button {
+        position: absolute;
+      }
     }
+
+    .project__close-button {
+      margin-bottom: 1em;
+      bottom: 0;
+      right: 4em;
+    }
+  }
+
+  .project__close-button-svg {
+    // padding: 0.5em;
+  }
+}
+
+@media(max-width: 550px) {
+  .app-body {
+    grid-gap: 1em;
   }
 }
