@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.7578dc5f.css",
   "main.css.map": "static/css/main.7578dc5f.css.map",
-  "main.js": "static/js/main.fd47b6a1.js",
-  "main.js.map": "static/js/main.fd47b6a1.js.map",
+  "main.js": "static/js/main.0ec91268.js",
+  "main.js.map": "static/js/main.0ec91268.js.map",
   "static/media/1.JPG": "static/media/1.4001e902.JPG",
   "static/media/1b.jpg": "static/media/1b.96a5df06.jpg",
   "static/media/2.JPG": "static/media/2.6470e034.JPG",
@@ -45,6 +45,7 @@
   "static/media/platform.jpg": "static/media/platform.6214d0bc.jpg",
   "static/media/product.JPG": "static/media/product.5eba69d1.JPG",
   "static/media/read2.jpg": "static/media/read2.b1eceb41.jpg",
+  "static/media/resume.pdf": "static/media/resume.00ddabd4.pdf",
   "static/media/signup.jpg": "static/media/signup.082fe3f5.jpg",
   "static/media/support2.jpg": "static/media/support2.be3c929b.jpg",
   "static/media/whale.jpg": "static/media/whale.179a22dc.jpg",
