@@ -8,6 +8,7 @@ import CodedrillzLogo from './assets/codedrillz';
 import IndigoLogo from './assets/indigo';
 import NauticalLogo from './assets/nautical';
 import Project from './components/projects';
+import Resume from './assets/resume.pdf';
 
 class App extends Component {
   constructor(props) {
@@ -72,7 +73,7 @@ class App extends Component {
           <div className="nav__menu" onClick={() => this.toggleProject('nothing')}>
             <ul className="nav__menu-item">
               {/* <li><a href="">Work</a></li> */}
-              <li><a href="https://jshchui.github.io/assets/resume.pdf" target="_blank">Resume</a></li>
+              <li><a href={Resume} target="_blank">Resume</a></li>
               <li><a onClick={() => this.toggleProject('Contact Page')}>Contact</a></li>
             </ul>
           </div>
