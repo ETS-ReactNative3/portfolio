@@ -67,7 +67,7 @@ class App extends Component {
 
         {/* className={this.state.projectShowing ? 'project project--show' : 'project project--hide'} */}
           <div className="nav__logo">
-            <h3>Jackie Chui</h3>
+            <h3>Jackie - Chui</h3>
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
           </div>
           <div className="nav__menu" onClick={() => this.toggleProject('nothing')}>
