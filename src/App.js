@@ -20,11 +20,29 @@ class App extends Component {
       projectShowing: false,
       currentProject: '',
       showMobileMenu: false,
+      currentLightBoxImage: '',
     }
 
     this.toggleProject = this.toggleProject.bind(this);
     this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
     this.scrollTop = this.scrollTop.bind(this);
+    this.toggleLightBox = this.toggleLightBox.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentDidMount() {
+    document.addEventListener('click', this.handleClick);
+  }
+
+  componentWillUmount() {
+    document.removeEventListener('click', this.handleClick);
+  }
+
+  handleClick(e) {
+    let clickingClass = e && e.target && e.target.className;
+    if(clickingClass && (typeof clickingClass === 'string') && clickingClass.includes('project__image')) {
+      this.toggleLightBox(e);
+    }
   }
 
   toggleProject(projectName) {
@@ -53,11 +71,25 @@ class App extends Component {
     })
   }
 
+  toggleLightBox(e) {
+    const imageLink = e && e.target && e.target.src;
+    if(this.state.currentLightBoxImage) {
+      this.setState({ currentLightBoxImage: '' });
+    } else {
+      this.setState({ currentLightBoxImage: `${imageLink}` });
+    }
+  }
+
   render() {
     return (
       <div className="App">
+        <div onClick={() => this.toggleLightBox()} className={this.state.currentLightBoxImage ? 'lightbox lightbox--show' : 'lightbox'}>
+          <div className="lightbox__content">
+            <img src={this.state.currentLightBoxImage} />
+          </div>
+          <p>click anywhere to close</p>
+        </div>
         <div className={this.state.showMobileMenu ? 'nav nav--show-mobile' : 'nav'}>
-
           <button className="hamburger__button" onClick={() => this.toggleMobileMenu()}>
             <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 19.49 19.49">
               <rect x="947.17" y="540.36" width="25" height="2.56" transform="translate(-1051.84 305.33) rotate(-45)"/>
@@ -65,11 +97,11 @@ class App extends Component {
             </svg>
           </button>
 
-        {/* className={this.state.projectShowing ? 'project project--show' : 'project project--hide'} */}
           <div className="nav__logo">
-            <h3>Jackie - Chui</h3>
+            <h3>Jackie Chui</h3>
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
           </div>
+
           <div className="nav__menu" onClick={() => this.toggleProject('nothing')}>
             <ul className="nav__menu-item">
               {/* <li><a href="">Work</a></li> */}
@@ -78,6 +110,7 @@ class App extends Component {
             </ul>
           </div>
         </div>
+
         <div className="app-body">
           <button className="hamburger__button" onClick={() => this.toggleMobileMenu()}>
             <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 25 21.33">
@@ -86,10 +119,11 @@ class App extends Component {
               ><rect y="18.77" width="25" height="2.56"/>
             </svg>
           </button>
-          {/* <h1 className="App-title">Welcome to React</h1> */}
           <div className="app-body__block" onClick={() => this.toggleProject('Fanswifi')}>
             {/* <p className="app-body__number">Fanswifi</p> */}
             <FanswifiLogo className='App-logo' ariaLabel='logo' />
+            <div className="app-body__title">Fanswifi</div>  
+
             <div className="inner top"></div>
             <div className="inner bottom"></div>
             <div className="inner left"></div>
@@ -97,23 +131,31 @@ class App extends Component {
           </div>
           <div className="app-body__block" onClick={() => this.toggleProject('Werewolf')}>
             {/* <p className="app-body__number">Werewolf</p>   */}
-            <WerewolfLogo className='App-logo' ariaLabel='logo' />        
+            <WerewolfLogo className='App-logo' ariaLabel='logo' />
+            <div className="app-body__title">Werewolf</div>  
           </div>
           <div className="app-body__block" onClick={() => this.toggleProject('Triangle')}>
             {/* <p className="app-body__number">Triangle</p> */}
             <TriangleLogo className='App-logo' ariaLabel='logo' />
+            <div className="app-body__title">Triangle</div>  
           </div>
           <div className="app-body__block" onClick={() => this.toggleProject('Codedrillz')}>
             {/* <p className="app-body__number">CodeDrillz</p>       */}
-            <CodedrillzLogo className='App-logo' ariaLabel='logo' />                
+            <CodedrillzLogo className='App-logo' ariaLabel='logo' />
+            <div className="app-body__title">Codedrillz</div>
           </div>
           <div className="app-body__block" onClick={() => this.toggleProject('Rediscover Indigo')}>
             {/* <p className="app-body__number">Rediscover Indigo</p>    */}
-            <IndigoLogo className='App-logo' ariaLabel='logo' />                     
+            <IndigoLogo className='App-logo' ariaLabel='logo' />
+            <div className="app-body__title">Rediscover Indigo</div>
           </div>
           <div className="app-body__block" onClick={() => this.toggleProject('Nauticalcats')}>
             {/* <p className="app-body__number">Nautical Cats</p>  */}
-            <NauticalLogo className='App-logo' ariaLabel='logo' />                
+            <div className="css-logo-animation-hack">
+              {/* I need a hack here because I cannot transform rotate and translate seperately */}
+              <NauticalLogo className='App-logo' ariaLabel='logo' />
+            </div>
+            <div className="app-body__title">Nautical Cats</div>
           </div>
         </div>
         <Project
@@ -123,9 +165,6 @@ class App extends Component {
           scrollTop={this.scrollTop}
           projectRef={this.projectContainerRef}
         />
-        {/* <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p> */}
       </div>
     );
   }

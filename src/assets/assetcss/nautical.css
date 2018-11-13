@@ -1,7 +1,8 @@
 .logo-container--nautical {
   transform-origin: center center;
   min-width: 135px;
-  max-width: 135px; }
+  max-width: 135px;
+  transition: 0.4s all; }
 
 .cls-nautical {
   fill: grey; }
