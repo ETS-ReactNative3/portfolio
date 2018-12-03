@@ -9,6 +9,7 @@ import IndigoLogo from './assets/indigo';
 import NauticalLogo from './assets/nautical';
 import Project from './components/projects';
 import Resume from './assets/resume.pdf';
+import Logo from './components/logo';
 
 class App extends Component {
   constructor(props) {
@@ -99,6 +100,7 @@ class App extends Component {
 
           <div className="nav__logo">
             <h3>Jackie Chui</h3>
+            {/* <Logo /> */}
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
           </div>
 
