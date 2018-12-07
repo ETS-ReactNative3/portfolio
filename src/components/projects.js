@@ -49,11 +49,14 @@ class Project1 extends Component {
         </button>
         <h1 className="project__title">{this.props.currentProject}</h1>
         {this.chooseProject(this.props.currentProject)}
-        <button className="project__scroll-top" onClick={this.props.scrollTop}>
-          <svg id="Layer_1" viewBox="0 0 23.49 13.56">
-            <polygon points="13.56 1.81 11.74 0 9.93 1.81 0 11.74 1.81 13.56 11.74 3.62 21.68 13.56 23.49 11.74 13.56 1.81"/>
-          </svg>
-        </button>
+        {
+          this.props.currentProject !== 'Contact' ?
+          <button className="project__scroll-top" onClick={this.props.scrollTop}>
+            <svg id="Layer_1" viewBox="0 0 23.49 13.56">
+              <polygon points="13.56 1.81 11.74 0 9.93 1.81 0 11.74 1.81 13.56 11.74 3.62 21.68 13.56 23.49 11.74 13.56 1.81"/>
+            </svg>
+          </button> : null
+        }
       </div>
 		)
 	}

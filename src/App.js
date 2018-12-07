@@ -46,12 +46,22 @@ class App extends Component {
   }
 
   toggleProject(projectName) {
-    if(this.state.projectShowing) {
+    if (this.state.projectShowing && projectName === 'Contact') {
+      this.setState({projecetShowing: false});
+      setTimeout(() => {
+        this.setState({
+          currentProject: 'Contact',
+          projectShowing: true
+        })
+      }, 600);
+    } if (this.state.projectShowing) {
       this.setState({projectShowing: false});
     } else {
       if (projectName !== 'nothing') {
-        this.setState({currentProject: `${projectName}`});
-        this.setState({projectShowing: true});
+        this.setState({
+          currentProject: `${projectName}`,
+          projectShowing: true
+        });
       }
     }
   }
