@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import TriangleLogo from './assets/triangle';
 import FanswifiLogo from './assets/fanswifi';
@@ -86,7 +85,7 @@ class App extends Component {
       <div className="App">
         <div onClick={() => this.toggleLightBox()} className={this.state.currentLightBoxImage ? 'lightbox lightbox--show' : 'lightbox'}>
           <div className="lightbox__content">
-            <img src={this.state.currentLightBoxImage} />
+            <img src={this.state.currentLightBoxImage} alt="Lightbox placeholder"/>
           </div>
           <p>click anywhere to close</p>
         </div>
@@ -108,7 +107,7 @@ class App extends Component {
             <ul className="nav__menu-item">
               {/* <li><a href="">Work</a></li> */}
               <li><a href={Resume} target="_blank">Resume</a></li>
-              <li><a onClick={() => this.toggleProject('Contact Page')}>Contact</a></li>
+              <li><a onClick={() => this.toggleProject('Contact')}>Contact</a></li>
             </ul>
           </div>
         </div>

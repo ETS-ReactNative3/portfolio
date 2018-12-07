@@ -21,26 +21,18 @@ class Project1 extends Component {
     switch(projectNumber) {
       case 'Werewolf':
         return <ProjectWerewolf />
-        break;
       case 'Triangle':
         return <ProjectTriangle />
-        break;
       case 'Fanswifi':
         return <ProjectFanswifi />
-        break;
       case 'Codedrillz':
         return <ProjectCodedrillz />
-        break;
       case 'Nauticalcats':
         return <ProjectNauticalcats />
-        break;
       case 'Rediscover Indigo':
         return <ProjectRediscoverindigo />
-        break;
-      case 'Contact Page':
-        console.log('returning contact page');
+      case 'Contact':
         return <ContactPage />
-        break;
       default:
         return <div>Nothing</div>
     }

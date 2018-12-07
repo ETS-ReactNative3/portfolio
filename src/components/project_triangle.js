@@ -3,17 +3,13 @@ import Image1 from './../assets/triangle/1b.jpg';
 import Image5 from './../assets/triangle/5b.jpg';
 
 class ProjectTriangle extends Component {
-  constructor(props, context) {
-    super(props, context);
-  }
-
 	render() {
 		return (
 			<div className="project__content">
 				<p>
 					Tri-Angle is 3 triangular/modular lamps that can be placed at different angles. Tri-Angle consists of three tri-angular shaped pieces that lights up when another modular piece is connected with it.
 				</p>
-				<img className="project__image" src={Image1} />
+				<img className="project__image" src={Image1} alt="Triangle" />
 
 				<h2>Role</h2>
 				<p>
@@ -23,7 +19,7 @@ class ProjectTriangle extends Component {
 					Please check out our <a href="https://iat336teamnegatron.wordpress.com">team blog</a> for a more indepth look of the process and behind the scenes!
 				</p>
 
-				<img className="project__image" src={Image5} />
+				<img className="project__image" src={Image5} alt="Triangle Lamp Process Builds" />
 
 				<div className="project__collab-skills">
 					<div className="project__collaborators">
@@ -41,7 +37,7 @@ class ProjectTriangle extends Component {
 					</div>
 				</div>
 
-				<iframe className="project__video" width="100%" height="315" src="https://www.youtube.com/embed/AkVmbeIwZDE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<iframe className="project__video" width="100%" height="315" src="https://www.youtube.com/embed/AkVmbeIwZDE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Triangle Demo"></iframe>
 			</div>
 		)
 	}

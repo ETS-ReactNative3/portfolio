@@ -14,24 +14,20 @@ import ImgRead from './../assets/indigo/read2.jpg';
 import ImgSupport from './../assets/indigo/support2.jpg';
 
 class ProjectRediscoverindigo extends Component {
-  constructor(props, context) {
-    super(props, context);
-  }
-
 	render() {
 		return (
       <div className="project__content">
         <p>
           Rediscover Indigo is a mobile and web platform, designed to allow authors to showcase unpublished work and for readers to discover, support, and help bring their stories to the market.
         </p>
-        <img className="project__image" src={ImgPlatform} />
-
+        <img className="project__image" src={ImgPlatform} alt="Rediscover Indigo Platform" />
 
         <h2>My Role</h2>
         <p>
           Rediscover Indigo was a project done in five weeks. For the first three weeks, I led the ideation and creation of the project including the interaction and user experience of the platform. On the last two weeks, I shifted to a more technical role, creating the motion graphics of the UI with AfterEffects and Premiere Pro.
         </p>
 
+        <img className="project__image" src={ImgBusinessproblem} alt="Indigo's Business Problem" />
         <h2>Business and Sector Problem</h2>
         <p>
           Indigo's book sales are declining because readers are able to purchase their books more quickly, conveniently and at a lower cost using internet-based retailers
@@ -40,17 +36,17 @@ class ProjectRediscoverindigo extends Component {
           Book sales are declining because people are opting for more convenient methods to obtain their books online or are finding other sources of entertainment. Where the source or how the source of entertainment comes from doesn't matter. What people look for is convenience, this is where stories relying on a physical retail space as their main source of revenue are struggling
         </p>
         <h2>Opening</h2>
-        <img className="project__image" src={ImgOpening} />
+        <img className="project__image" src={ImgOpening} alt="Opening for Indigo" />
 
         <h2>Indigo's Current Brand Position</h2>
-        <img className="project__image" src={ImgBrandshift1} />
+        <img className="project__image" src={ImgBrandshift1} alt="Indigo's Current Brand Position" />
 
         <p>
           Indigo's current brand position is currently only focused on being a book vendor, putting it in a losing competition against Amazon. Without the need to maintain a physical presence, Amazon is easily able to undercut Indigo prices by a substantial amount.
         </p>
 
         <h2>Our Proposed Brand Shift</h2>
-        <img className="project__image" src={ImgBrandshift2} />
+        <img className="project__image" src={ImgBrandshift2} alt="Our Proposed Brand Shift for Indigo" />
 
         <p>
           By shifting Indigo's focus towards being a "Literary Agent" and promoting the works of potential author, Indigo can regain customer loyalty along with a revenue stream. A sustainable revenue model can be established because by acting as Literary Agent for published books, Indigo can receive a percentage for every book sold, whether it is sold at their own bookstore, or at online retailers such as Amazon.
@@ -61,14 +57,14 @@ class ProjectRediscoverindigo extends Component {
           We propse a multi-device platform, that is optimized for mobile, tablet, and web usage. It allows authors to upload their unpublished work, to receive feedback and build a fanbase started prior to publication. After enough fans have supported the author's work, we will connect them with an appropriate publisher. Once published, the book will be displayed in Indigo's bookstore.
         </p>
 
-        <img className="project__image" src={ImgMobile} />
-        <img className="project__image" src={ImgDiscover} />
-        <img className="project__image" src={ImgConnect} />
-        <img className="project__image" src={ImgRead} />
-        <img className="project__image" src={ImgSupport} />
-        <img className="project__image" src={ImgJourneyframework} />
-        <img className="project__image" src={ImgJourneymapping} />
-        <img className="project__image" src={ImgJourneySketch} />
+        <img className="project__image" src={ImgMobile} alt="Rediscover Indigo Mobile" />
+        <img className="project__image" src={ImgDiscover} alt="Rediscover Indigo Discover" />
+        <img className="project__image" src={ImgConnect} alt="Rediscover Indigo Connect" />
+        <img className="project__image" src={ImgRead} alt="Rediscover Indigo Read" />
+        <img className="project__image" src={ImgSupport} alt="Rediscover Indigo Support" />
+        <img className="project__image" src={ImgJourneyframework} alt="Rediscover Indigo Journey Framework" />
+        <img className="project__image" src={ImgJourneymapping} alt="Rediscover Indigo Journeymapping" />
+        <img className="project__image" src={ImgJourneySketch} alt="Rediscover Indigo Journey Mapping Sketch"/>
 
         <div className="project__collab-skills">
 					<div className="project__collaborators">

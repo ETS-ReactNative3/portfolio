@@ -8,14 +8,10 @@ import ImgVs from './../assets/nauticalcats/nauticalvs.jpg';
 import ImgWhalemap from './../assets/nauticalcats/whale.jpg';
 
 class ProjectNauticalcats extends Component {
-  constructor(props, context) {
-    super(props, context);
-  }
-  
 	render() {
     return (
       <div className="project__content">
-        <img className="project__image" src={ImgHomepage} />
+        <img className="project__image" src={ImgHomepage} alt="Nautical Cats Homescreen" />
         <p>
           Nautical Cats is a 2-D platformer player vs player (PVP) capture the fish game. The essential idea behind the game is for players to collect more Fish than their opponents before the time runs out.
         </p>
@@ -35,8 +31,8 @@ class ProjectNauticalcats extends Component {
 
         <h2>Basic Instructions</h2>
         <div className="project__image-container">
-          <img className="project__image project__image--half" src={ImgInstructions} />
-          <img className="project__image project__image--half" src={ImgVs} />
+          <img className="project__image project__image--half" src={ImgInstructions} alt="Nautical Cats Instructions" />
+          <img className="project__image project__image--half" src={ImgVs} alt="Nautical Cats Versus Screen" />
         </div>
 
         <p>
@@ -61,16 +57,16 @@ class ProjectNauticalcats extends Component {
         </p>
 
         <h2>Controls</h2>
-        <img className="project__image" src={ImgControls} />
+        <img className="project__image" src={ImgControls} alt="Nautical Cats Controls" />
 
         <h2>Maps</h2>
-        <img className="project__image" src={ImgWhalemap} />
+        <img className="project__image" src={ImgWhalemap} alt="Nautical Cats Whale Map" />
         <p className="project__image-caption">Whale Island: Consist of a whale that dives or spouts at random times</p>
         
-        <img className="project__image" src={ImgFallmap} />
+        <img className="project__image" src={ImgFallmap} alt="Nautical Cats Waterfall Map" />
         <p className="project__image-caption">Nautical Falls: Consist of a river that actively tries to pull you down in the depths.</p>
 
-        <img className="project__image" src={ImgIcemap} />
+        <img className="project__image" src={ImgIcemap} alt="Nautical Cats Ice Map" />
         <p className="project__image-caption">Icy Cliffs: Extra Slippery with raining icicles!</p>
 
         <h2>Try it</h2>

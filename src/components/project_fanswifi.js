@@ -6,14 +6,10 @@ import ImgWhitelabeling from './../assets/fanswifi/whitelabeling.JPG';
 import ImgWhois from './../assets/fanswifi/whois.JPG';
 
 class ProjectFanswifi extends Component {
-  constructor(props, context) {
-    super(props, context);
-  }
-
 	render() {
 		return (
       <div className="project__content">
-        <img className="project__image" src={ImgHomescreen} />
+        <img className="project__image" src={ImgHomescreen} alt="Fanswifi Homepage" />
 
         <p>
           Fanswifi is a social, wifi hotspot platform with built in analytics for market insight, allowing their clients to gather valuable insights about their customers.
@@ -23,7 +19,7 @@ class ProjectFanswifi extends Component {
           For their exhibition in Singapore, I redesigned and developed their website to clearly articulate business values to their clients.
         </p>
 
-        <a className="project__button" href="https://github.com/jshchui/fwnext" target="_blank">
+        <a className="project__button" href="https://github.com/jshchui/fwnext" target="_blank" rel="noopener noreferrer">
           Github
         </a>
 
@@ -34,10 +30,10 @@ class ProjectFanswifi extends Component {
           <p>HTML/CSS/JQuery</p>
         </div>
 
-        <img className="project__image" src={ImgWhois} />
-        <img className="project__image" src={ImgProduct} />
-        <img className="project__image" src={ImgWhitelabeling} />
-        <img className="project__image" src={ImgCustomer} />
+        <img className="project__image" src={ImgWhois} alt="Fanswifi Audience" />
+        <img className="project__image" src={ImgProduct} alt="Fanswifi Instructions" />
+        <img className="project__image" src={ImgWhitelabeling} alt="Fanswifi White Labeling" />
+        <img className="project__image" src={ImgCustomer} alt="Fanswifi Customers" />
       </div>
 		)
 	}

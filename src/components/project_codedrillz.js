@@ -7,14 +7,10 @@ import ImgDrills2 from './../assets/codedrillz/drills2.jpg';
 import ImgDrills3 from './../assets/codedrillz/drills3.jpg';
 
 class ProjectCodedrillz extends Component {
-  constructor(props, context) {
-    super(props, context);
-  }
-
 	render() {
 		return (
       <div className="project__content">
-        <img className="project__image" src={ImgHomescreen} />
+        <img className="project__image" src={ImgHomescreen} alt="Codedrillz homescreen" />
 
         <p>
           A team project built over a 72 hour period for users to test their skills in coding which utilizes a point-based design for increased motivation. Built on Rails, Bootstrap, and jQuery. An emphasis was put towards GitHub collaboration and version control. My responsibilities included the website design using illustrator and front-end coding using jQuery and Bootstrap.
@@ -39,11 +35,11 @@ class ProjectCodedrillz extends Component {
 					</div>
 				</div>
 
-        <img className="project__image" src={ImgSignup} />
-        <img className="project__image" src={ImgDrills1} />
-        <img className="project__image" src={ImgDrills2} />
-        <img className="project__image" src={ImgDrills3} />
-        <img className="project__image" src={ImgLeaderboard} />
+        <img className="project__image" src={ImgSignup} alt="Codedrillz signup page" />
+        <img className="project__image" src={ImgDrills1} alt="Codedrillz drillgroups" />
+        <img className="project__image" src={ImgDrills2} alt="Codedrillz questions" />
+        <img className="project__image" src={ImgDrills3} alt="Codedrillz questions" />
+        <img className="project__image" src={ImgLeaderboard} alt="Codedrillz leaderboards" />
       </div>
 		)
 	}

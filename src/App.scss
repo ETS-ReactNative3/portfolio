@@ -37,7 +37,7 @@ html, body, #root {
   transition: 0.4s all;
 
   // box-shadow: 1px 1px 4px 1px lightgrey;
-  z-index: 2;
+  z-index: 1;
 }
 
 .nav__logo {
@@ -86,7 +86,7 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 1;
+  // z-index: 1;
 }
 
 .App {
@@ -265,10 +265,18 @@ a {
   max-width: 100px;
   padding: 0.5em 2em;
   text-align: center;
-  box-shadow: 1px 1px 5px 1px grey;
+  color: black;
+  font-size: 14px;
+  box-shadow: 1px 1px 5px 1px lightgrey;
+  transition: 0.4s all;
 
   &:hover {
-    box-shadow: 1px 1px 10px 1px grey;
+    box-shadow: 1px 1px 10px 1px lightgrey;
+  }
+
+  &--contact {
+    display: inline-block;
+    margin: 0.5em 1em 0 0;
   }
 }
 
@@ -403,7 +411,7 @@ a {
   .project {
     width: 100%;
     padding: 1em;
-    z-index: 1;
+    z-index: 2;
 
     &--hide {
       right: -100%;

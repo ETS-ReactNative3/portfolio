@@ -14,14 +14,10 @@ import Mobile9 from './../assets/werewolf/m9.JPG';
 
 
 class ProjectWerewolf extends Component {
-  constructor(props, context) {
-    super(props, context);
-  }
-
 	render() {
 		return (
       <div className="project__content">
-        <img className="project__image" src={Banner} />
+        <img className="project__image" src={Banner} alt="Werewolf Banner" />
 
         <p>
           Werewolf is a web application adaption to the popular social game Werewolf and Mafia.
@@ -35,7 +31,7 @@ class ProjectWerewolf extends Component {
           During day time, the villagers and the seer must do their best to uncover the werewolves and lynch themwhile the werewolves must eliminate all the villagers.
         </p>
 
-        <a className="project__button" href="https://github.com/jshchui/fwnext" target="_blank">
+        <a className="project__button" href="https://github.com/jshchui/fwnext" target="_blank" rel="noopener noreferrer">
           Github
         </a>
 
@@ -47,25 +43,25 @@ class ProjectWerewolf extends Component {
           <p>Illustrator</p>
         </div>
 
-        <img className="project__image" src={Image1} />
-        <img className="project__image" src={Image2} />
+        <img className="project__image" src={Image1} alt="Werewolf Homescreen" />
+        <img className="project__image" src={Image2} alt="Werewolf Gamescreen" />
         
         <div className="project__mobile-container">
-          <img className="project__mobile-image" src={Mobile1} />
-          <img className="project__mobile-image" src={Mobile2} />
-          <img className="project__mobile-image" src={Mobile3} />
+          <img className="project__mobile-image" src={Mobile1} alt="Werewolf Mobile Game Screen" />
+          <img className="project__mobile-image" src={Mobile2} alt="Werewolf Mobile Player Screen" />
+          <img className="project__mobile-image" src={Mobile3} alt="Werewolf Mobile Dead Screen" />
         </div>
 
         <div className="project__mobile-container">
-          <img className="project__mobile-image" src={Mobile4} />
-          <img className="project__mobile-image" src={Mobile5} />
-          <img className="project__mobile-image" src={Mobile6} />
+          <img className="project__mobile-image" src={Mobile4} alt="Werewolf Villager" />
+          <img className="project__mobile-image" src={Mobile5} alt="Werewolf Seer" />
+          <img className="project__mobile-image" src={Mobile6} alt="Werewolf Werewolf" />
         </div>
 
         <div className="project__mobile-container">
-          <img className="project__mobile-image" src={Mobile7} />
-          <img className="project__mobile-image" src={Mobile8} />
-          <img className="project__mobile-image" src={Mobile9} />
+          <img className="project__mobile-image" src={Mobile7} alt="Werewolf Lynching" />
+          <img className="project__mobile-image" src={Mobile8} alt="Werewolf Seer Turn" />
+          <img className="project__mobile-image" src={Mobile9} alt="Werewolf Turn" />
         </div>
       </div>
 		)
