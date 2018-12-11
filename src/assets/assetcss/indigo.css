@@ -6,7 +6,7 @@
   fill: grey; }
 
 .cls-indigo-white {
-  fill: #f1f1f1; }
+  fill: white; }
 
 .app-body__block:hover .pen-white {
   animation: pen-white-animation 1s infinite; }
