@@ -10,6 +10,8 @@ import Project from './components/projects';
 import Resume from './assets/resume.pdf';
 import Logo from './components/logo';
 
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -32,6 +34,13 @@ class App extends Component {
 
   componentDidMount() {
     document.addEventListener('click', this.handleClick);
+    const pathName = window && window.location && window.location.pathname;
+    if (pathName !== '/') {
+      this.setState({
+        projectShowing: true,
+        currentProject: pathName.substr(1)
+      })
+    }
   }
 
   componentWillUmount() {
@@ -92,91 +101,97 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div onClick={() => this.toggleLightBox()} className={this.state.currentLightBoxImage ? 'lightbox lightbox--show' : 'lightbox'}>
-          <div className="lightbox__content">
-            <img src={this.state.currentLightBoxImage} alt="Lightbox placeholder"/>
-          </div>
-          <p>click anywhere to close</p>
-        </div>
-        <div className={this.state.showMobileMenu ? 'nav nav--show-mobile' : 'nav'}>
-          <button className="hamburger__button" onClick={() => this.toggleMobileMenu()}>
-            <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 19.49 19.49">
-              <rect x="947.17" y="540.36" width="25" height="2.56" transform="translate(-1051.84 305.33) rotate(-45)"/>
-              <rect x="958.39" y="529.14" width="2.56" height="25" transform="translate(-1051.84 305.33) rotate(-45)"/>
-            </svg>
-          </button>
-
-          <div className="nav__logo">
-            <h3>Jackie Chui</h3>
-            {/* <Logo /> */}
-            {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          </div>
-
-          <div className="nav__menu" onClick={() => this.toggleProject('nothing')}>
-            <ul className="nav__menu-item">
-              {/* <li><a href="">Work</a></li> */}
-              <li><a href={Resume} target="_blank">Resume</a></li>
-              <li><a onClick={() => this.toggleProject('Contact')}>Contact</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="app-body">
-          <button className="hamburger__button" onClick={() => this.toggleMobileMenu()}>
-            <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 25 21.33">
-              <rect width="25" height="2.56"/>
-              <rect y="9.39" width="25" height="2.56"/
-              ><rect y="18.77" width="25" height="2.56"/>
-            </svg>
-          </button>
-          <div className="app-body__block" onClick={() => this.toggleProject('Fanswifi')}>
-            {/* <p className="app-body__number">Fanswifi</p> */}
-            <FanswifiLogo className='App-logo' ariaLabel='logo' />
-            <div className="app-body__title">Fanswifi</div>  
-
-            <div className="inner top"></div>
-            <div className="inner bottom"></div>
-            <div className="inner left"></div>
-            <div className="inner right"></div>
-          </div>
-          <div className="app-body__block" onClick={() => this.toggleProject('Werewolf')}>
-            {/* <p className="app-body__number">Werewolf</p>   */}
-            <WerewolfLogo className='App-logo' ariaLabel='logo' />
-            <div className="app-body__title">Werewolf</div>  
-          </div>
-          <div className="app-body__block" onClick={() => this.toggleProject('Triangle')}>
-            {/* <p className="app-body__number">Triangle</p> */}
-            <TriangleLogo className='App-logo' ariaLabel='logo' />
-            <div className="app-body__title">Triangle</div>  
-          </div>
-          <div className="app-body__block" onClick={() => this.toggleProject('Codedrillz')}>
-            {/* <p className="app-body__number">CodeDrillz</p>       */}
-            <CodedrillzLogo className='App-logo' ariaLabel='logo' />
-            <div className="app-body__title">Codedrillz</div>
-          </div>
-          <div className="app-body__block" onClick={() => this.toggleProject('Rediscover Indigo')}>
-            {/* <p className="app-body__number">Rediscover Indigo</p>    */}
-            <IndigoLogo className='App-logo' ariaLabel='logo' />
-            <div className="app-body__title">Rediscover Indigo</div>
-          </div>
-          <div className="app-body__block" onClick={() => this.toggleProject('Nauticalcats')}>
-            {/* <p className="app-body__number">Nautical Cats</p>  */}
-            <div className="css-logo-animation-hack">
-              {/* I need a hack here because I cannot transform rotate and translate seperately */}
-              <NauticalLogo className='App-logo' ariaLabel='logo' />
+      <Router>
+        <div className="App">
+          <div onClick={() => this.toggleLightBox()} className={this.state.currentLightBoxImage ? 'lightbox lightbox--show' : 'lightbox'}>
+            <div className="lightbox__content">
+              <img src={this.state.currentLightBoxImage} alt="Lightbox placeholder"/>
             </div>
-            <div className="app-body__title">Nautical Cats</div>
+            <p>click anywhere to close</p>
           </div>
+          <div className={this.state.showMobileMenu ? 'nav nav--show-mobile' : 'nav'}>
+            <button className="hamburger__button" onClick={() => this.toggleMobileMenu()}>
+              <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 19.49 19.49">
+                <rect x="947.17" y="540.36" width="25" height="2.56" transform="translate(-1051.84 305.33) rotate(-45)"/>
+                <rect x="958.39" y="529.14" width="2.56" height="25" transform="translate(-1051.84 305.33) rotate(-45)"/>
+              </svg>
+            </button>
+
+            <div className="nav__logo">
+              <h3>Jackie Chui</h3>
+              {/* <Logo /> */}
+              {/* <img src={logo} className="App-logo" alt="logo" /> */}
+            </div>
+
+            <div className="nav__menu" onClick={() => this.toggleProject('nothing')}>
+              <ul className="nav__menu-item">
+                <li><a href={Resume} target="_blank">Resume</a></li>
+                <li>
+                  <Link to={`/contact`} onClick={() => this.toggleProject('contact')}>
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="app-body">
+            <button className="hamburger__button" onClick={() => this.toggleMobileMenu()}>
+              <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 25 21.33">
+                <rect width="25" height="2.56"/>
+                <rect y="9.39" width="25" height="2.56"/
+                ><rect y="18.77" width="25" height="2.56"/>
+              </svg>
+            </button>
+            <Link className="app-body__block" to={`/fanswifi`} onClick={() => this.toggleProject('fanswifi')}>
+              {/* <p className="app-body__number">Fanswifi</p> */}
+              <FanswifiLogo className='App-logo' ariaLabel='logo' />
+              <div className="app-body__title">Fanswifi</div>  
+
+              <div className="inner top"></div>
+              <div className="inner bottom"></div>
+              <div className="inner left"></div>
+              <div className="inner right"></div>
+            </Link>
+
+            <Link className="app-body__block" to={`/werewolf`} onClick={() => this.toggleProject('werewolf')}>
+              {/* <p className="app-body__number">Werewolf</p>   */}
+              <WerewolfLogo className='App-logo' ariaLabel='logo' />
+              <div className="app-body__title">Werewolf</div>  
+            </Link>
+            <Link className="app-body__block" to={`/triangle`} onClick={() => this.toggleProject('triangle')}>
+              {/* <p className="app-body__number">Triangle</p> */}
+              <TriangleLogo className='App-logo' ariaLabel='logo' />
+              <div className="app-body__title">Triangle</div>  
+            </Link>
+            <Link className="app-body__block" to={`/codedrillz`} onClick={() => this.toggleProject('codedrillz')}>
+              {/* <p className="app-body__number">CodeDrillz</p>       */}
+              <CodedrillzLogo className='App-logo' ariaLabel='logo' />
+              <div className="app-body__title">Codedrillz</div>
+            </Link>
+            <Link className="app-body__block" to={`/rediscoverindigo`} onClick={() => this.toggleProject('rediscoverindigo')}>
+              {/* <p className="app-body__number">Rediscover Indigo</p>    */}
+              <IndigoLogo className='App-logo' ariaLabel='logo' />
+              <div className="app-body__title">Rediscover Indigo</div>
+            </Link>
+            <Link className="app-body__block" to={`/nauticalcats`} onClick={() => this.toggleProject('nauticalcats')}>
+              {/* <p className="app-body__number">Nautical Cats</p>  */}
+              <div className="css-logo-animation-hack">
+                {/* I need a hack here because I cannot transform rotate and translate seperately */}
+                <NauticalLogo className='App-logo' ariaLabel='logo' />
+              </div>
+              <div className="app-body__title">Nautical Cats</div>
+            </Link>
+          </div>
+          <Project
+            className={this.state.projectShowing ? 'project project--show' : 'project project--hide'}
+            currentProject={this.state.currentProject}
+            toggleProject={this.toggleProject}
+            scrollTop={this.scrollTop}
+            projectRef={this.projectContainerRef}
+          />
         </div>
-        <Project
-          className={this.state.projectShowing ? 'project project--show' : 'project project--hide'}
-          currentProject={this.state.currentProject}
-          toggleProject={this.toggleProject}
-          scrollTop={this.scrollTop}
-          projectRef={this.projectContainerRef}
-        />
-      </div>
+      </Router>
     );
   }
 }

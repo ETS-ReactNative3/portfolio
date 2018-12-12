@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import ProfileImg from './../assets/me.png';
 import Resume from './../assets/resume.pdf'
 
-
 class ContactPage extends Component {
 	render() {
-		return (
-			<div className="project__content">
-      	<img className="profile-img" src={ProfileImg} alt="Jackie"/>
-				<p>
-				  I am Front-end Developer and a design student graduate from Simon Fraser University Majoring in the School of Interactive Arts and Technology.
+		return (  
+      <div className="project__content">
+        <img className="profile-img" src={ProfileImg} alt="Jackie"/>
+        <p>
+          I am Front-end Developer and a design student graduate from Simon Fraser University Majoring in the School of Interactive Arts and Technology.
         </p>
 
         <p>
@@ -25,7 +24,7 @@ class ContactPage extends Component {
         <a className="project__button project__button--contact" href="https://github.com/jshchui" target="_blank" rel="noopener noreferrer">
           Github
         </a>
-			</div>
+      </div>
 		)
 	}
 }
