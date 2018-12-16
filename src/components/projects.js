@@ -19,19 +19,19 @@ class Project1 extends Component {
   chooseProject(projectNumber) {
 
     switch(projectNumber) {
-      case 'werewolf':
+      case `${this.props.hostName}werewolf`:
         return <ProjectWerewolf />
-      case 'triangle':
+      case `${this.props.hostName}triangle`:
         return <ProjectTriangle />
-      case 'fanswifi':
+      case `${this.props.hostName}fanswifi`:
         return <ProjectFanswifi />
-      case 'codedrillz':
+      case `${this.props.hostName}codedrillz`:
         return <ProjectCodedrillz />
-      case 'nauticalcats':
+      case `${this.props.hostName}nauticalcats`:
         return <ProjectNauticalcats />
-      case 'rediscoverindigo':
+      case `${this.props.hostName}rediscoverindigo`:
         return <ProjectRediscoverindigo />
-      case 'contact':
+      case `${this.props.hostName}contact`:
         return <ContactPage routeName={this.props.currentProject}/>
       default:
         return <div>Nothing</div>
@@ -39,9 +39,10 @@ class Project1 extends Component {
   }
 
 	render() {
+    let projectTitle = this.props.currentProject.replace('portfolio/', '');
 		return (
       <div className={this.props.className} ref={this.props.projectRef}>
-        <Link to={`/`} className="project__close-button" onClick={this.props.toggleProject}>
+        <Link to={`/${this.props.hostName}`} className="project__close-button" onClick={this.props.toggleProject}>
             <div className="project__close-button">
               <svg id="Layer_1" className="project__close-button-svg" data-name="Layer 1" viewBox="0 0 19.49 19.49">
                 <rect x="947.17" y="540.36" width="25" height="2.56" transform="translate(-1051.84 305.33) rotate(-45)"/>
@@ -50,7 +51,7 @@ class Project1 extends Component {
             </div>
         </Link>
         <h1 className="project__title">
-          {this.props.currentProject === 'rediscoverindigo' ? 'rediscover indigo' : this.props.currentProject}
+          {projectTitle === 'rediscoverindigo' ? 'rediscover indigo' : projectTitle}
         </h1>
         {this.chooseProject(this.props.currentProject)}
         {

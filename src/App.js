@@ -23,6 +23,7 @@ class App extends Component {
       currentProject: '',
       showMobileMenu: false,
       currentLightBoxImage: '',
+      hostName: '',
     }
 
     this.toggleProject = this.toggleProject.bind(this);
@@ -35,7 +36,9 @@ class App extends Component {
   componentDidMount() {
     document.addEventListener('click', this.handleClick);
     const pathName = window && window.location && window.location.pathname;
-    if (pathName !== '/') {
+    const isLive = pathName.includes('portfolio');
+    if (isLive) this.setState({ hostName: 'portfolio/' });
+    if (pathName !== '/' && pathName !== '/portfolio/') {
       this.setState({
         projectShowing: true,
         currentProject: pathName.substr(1)
@@ -55,11 +58,11 @@ class App extends Component {
   }
 
   toggleProject(projectName) {
-    if (this.state.projectShowing && projectName === 'Contact') {
-      this.setState({projecetShowing: false});
+    if (this.state.projectShowing && projectName === `${this.props.hostName}contact`) {
+      this.setState({projectShowing: false});
       setTimeout(() => {
         this.setState({
-          currentProject: 'Contact',
+          currentProject: `${this.props.hostName}contact`,
           projectShowing: true
         })
       }, 600);
@@ -68,7 +71,7 @@ class App extends Component {
     } else {
       if (projectName !== 'nothing') {
         this.setState({
-          currentProject: `${projectName}`,
+          currentProject: `${this.state.hostName}${projectName}`,
           projectShowing: true
         });
       }
@@ -118,8 +121,8 @@ class App extends Component {
             </button>
 
             <div className="nav__logo">
-              <h3>Jackie Chui</h3>
-              {/* <Logo /> */}
+              {/* <h3>Jackie Chui</h3> */}
+              <Logo />
               {/* <img src={logo} className="App-logo" alt="logo" /> */}
             </div>
 
@@ -127,7 +130,7 @@ class App extends Component {
               <ul className="nav__menu-item">
                 <li><a href={Resume} target="_blank">Resume</a></li>
                 <li>
-                  <Link to={`/contact`} onClick={() => this.toggleProject('contact')}>
+                  <Link to={`/${this.state.hostName}contact`} onClick={() => this.toggleProject('contact')}>
                     Contact
                   </Link>
                 </li>
@@ -136,6 +139,7 @@ class App extends Component {
           </div>
 
           <div className="app-body">
+            <div className="nav__logo nav__logo--mobile"><Logo /></div>
             <button className="hamburger__button" onClick={() => this.toggleMobileMenu()}>
               <svg id="Layer_1" data-name="Layer 1" viewBox="0 0 25 21.33">
                 <rect width="25" height="2.56"/>
@@ -143,7 +147,7 @@ class App extends Component {
                 ><rect y="18.77" width="25" height="2.56"/>
               </svg>
             </button>
-            <Link className="app-body__block" to={`/fanswifi`} onClick={() => this.toggleProject('fanswifi')}>
+            <Link className="app-body__block" to={`/${this.state.hostName}fanswifi`} onClick={() => this.toggleProject('fanswifi')}>
               {/* <p className="app-body__number">Fanswifi</p> */}
               <FanswifiLogo className='App-logo' ariaLabel='logo' />
               <div className="app-body__title">Fanswifi</div>  
@@ -154,27 +158,27 @@ class App extends Component {
               <div className="inner right"></div>
             </Link>
 
-            <Link className="app-body__block" to={`/werewolf`} onClick={() => this.toggleProject('werewolf')}>
+            <Link className="app-body__block" to={`/${this.state.hostName}werewolf`} onClick={() => this.toggleProject('werewolf')}>
               {/* <p className="app-body__number">Werewolf</p>   */}
               <WerewolfLogo className='App-logo' ariaLabel='logo' />
               <div className="app-body__title">Werewolf</div>  
             </Link>
-            <Link className="app-body__block" to={`/triangle`} onClick={() => this.toggleProject('triangle')}>
+            <Link className="app-body__block" to={`/${this.state.hostName}triangle`} onClick={() => this.toggleProject('triangle')}>
               {/* <p className="app-body__number">Triangle</p> */}
               <TriangleLogo className='App-logo' ariaLabel='logo' />
               <div className="app-body__title">Triangle</div>  
             </Link>
-            <Link className="app-body__block" to={`/codedrillz`} onClick={() => this.toggleProject('codedrillz')}>
+            <Link className="app-body__block" to={`/${this.state.hostName}codedrillz`} onClick={() => this.toggleProject('codedrillz')}>
               {/* <p className="app-body__number">CodeDrillz</p>       */}
               <CodedrillzLogo className='App-logo' ariaLabel='logo' />
               <div className="app-body__title">Codedrillz</div>
             </Link>
-            <Link className="app-body__block" to={`/rediscoverindigo`} onClick={() => this.toggleProject('rediscoverindigo')}>
+            <Link className="app-body__block" to={`/${this.state.hostName}rediscoverindigo`} onClick={() => this.toggleProject('rediscoverindigo')}>
               {/* <p className="app-body__number">Rediscover Indigo</p>    */}
               <IndigoLogo className='App-logo' ariaLabel='logo' />
               <div className="app-body__title">Rediscover Indigo</div>
             </Link>
-            <Link className="app-body__block" to={`/nauticalcats`} onClick={() => this.toggleProject('nauticalcats')}>
+            <Link className="app-body__block" to={`/${this.state.hostName}nauticalcats`} onClick={() => this.toggleProject('nauticalcats')}>
               {/* <p className="app-body__number">Nautical Cats</p>  */}
               <div className="css-logo-animation-hack">
                 {/* I need a hack here because I cannot transform rotate and translate seperately */}
@@ -189,6 +193,7 @@ class App extends Component {
             toggleProject={this.toggleProject}
             scrollTop={this.scrollTop}
             projectRef={this.projectContainerRef}
+            hostName={this.state.hostName}
           />
         </div>
       </Router>
