@@ -125,7 +125,6 @@ class App extends Component {
               <Logo />
               {/* <img src={logo} className="App-logo" alt="logo" /> */}
             </div>
-            {console.log('process: ', process.env)}
             <div className="nav__menu" onClick={() => this.toggleProject('nothing')}>
               <ul className="nav__menu-item">
                 <li><a href={Resume} target="_blank">Resume</a></li>
