@@ -7,7 +7,7 @@ import CodedrillzLogo from './assets/codedrillz';
 import IndigoLogo from './assets/indigo';
 import NauticalLogo from './assets/nautical';
 import Project from './components/projects';
-// import Resume from './assets/resume.pdf';
+import Resume from './assets/resume.pdf';
 import Logo from './components/logo';
 
 import { BrowserRouter as Router, Link } from 'react-router-dom';
@@ -128,7 +128,7 @@ class App extends Component {
             {console.log('process: ', process.env)}
             <div className="nav__menu" onClick={() => this.toggleProject('nothing')}>
               <ul className="nav__menu-item">
-                <li><a href={`${process.env.PUBLIC_URL}/resume.pdf`} target="_blank">Resume</a></li>
+                <li><a href={Resume} target="_blank">Resume</a></li>
                 <li>
                   <Link to={`/${this.state.hostName}contact`} onClick={() => this.toggleProject('contact')}>
                     Contact
