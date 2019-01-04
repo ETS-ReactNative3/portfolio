@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProfileImg from './../assets/me.png';
-import Resume from './../assets/resume.pdf'
+// import Resume from './../assets/resume.pdf'
 
 class ContactPage extends Component {
 	render() {
@@ -18,7 +18,7 @@ class ContactPage extends Component {
         <p>If you would like to collaborate or just have a chat, feel free to contact my E-mail or Phone!</p>
         <p>E-mail: jshchui@gmail.com</p>
         <p>Phone: 778-926-5883</p>
-        <a className="project__button project__button--contact" href={Resume} target="_blank" rel="noopener noreferrer">
+        <a className="project__button project__button--contact" href={`${process.env.PUBLIC_URL}/resume.pdf`} target="_blank" rel="noopener noreferrer">
           Resume
         </a>
         <a className="project__button project__button--contact" href="https://github.com/jshchui" target="_blank" rel="noopener noreferrer">
