@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ProjectHaikugenerator from './project_haikugenerator';
 import ProjectTriangle from './project_triangle';
 import ProjectWerewolf from './project_werewolf';
 import ProjectFanswifi from './project_fanswifi';
@@ -19,6 +20,8 @@ class Project1 extends Component {
   chooseProject(projectNumber) {
 
     switch(projectNumber) {
+      case `${this.props.hostName}haikugenerator`:
+        return <ProjectHaikugenerator />
       case `${this.props.hostName}werewolf`:
         return <ProjectWerewolf />
       case `${this.props.hostName}triangle`:
@@ -39,20 +42,16 @@ class Project1 extends Component {
   }
 
 	render() {
-    let projectTitle = this.props.currentProject.replace('portfolio/', '');
 		return (
       <div className={this.props.className} ref={this.props.projectRef}>
         <Link to={`/${this.props.hostName}`} className="project__close-button" onClick={this.props.toggleProject}>
-            <div className="project__close-button">
-              <svg id="Layer_1" className="project__close-button-svg" data-name="Layer 1" viewBox="0 0 19.49 19.49">
-                <rect x="947.17" y="540.36" width="25" height="2.56" transform="translate(-1051.84 305.33) rotate(-45)"/>
-                <rect x="958.39" y="529.14" width="2.56" height="25" transform="translate(-1051.84 305.33) rotate(-45)"/>
-              </svg>
-            </div>
+          <div className="project__close-button">
+            <svg id="Layer_1" className="project__close-button-svg" data-name="Layer 1" viewBox="0 0 19.49 19.49">
+              <rect x="947.17" y="540.36" width="25" height="2.56" transform="translate(-1051.84 305.33) rotate(-45)"/>
+              <rect x="958.39" y="529.14" width="2.56" height="25" transform="translate(-1051.84 305.33) rotate(-45)"/>
+            </svg>
+          </div>
         </Link>
-        <h1 className="project__title">
-          {projectTitle === 'rediscoverindigo' ? 'rediscover indigo' : projectTitle}
-        </h1>
         {this.chooseProject(this.props.currentProject)}
         {
           this.props.currentProject !== 'contact' ?

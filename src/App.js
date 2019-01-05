@@ -6,6 +6,7 @@ import WerewolfLogo from './assets/werewolf';
 import CodedrillzLogo from './assets/codedrillz';
 import IndigoLogo from './assets/indigo';
 import NauticalLogo from './assets/nautical';
+import HaikugeneratorLogo from './assets/haikugenerator';
 import Project from './components/projects';
 import Resume from './assets/resume.pdf';
 import Logo from './components/logo';
@@ -146,6 +147,7 @@ class App extends Component {
                 ><rect y="18.77" width="25" height="2.56"/>
               </svg>
             </button>
+
             <Link className="app-body__block" to={`/${this.state.hostName}fanswifi`} onClick={() => this.toggleProject('fanswifi')}>
               {/* <p className="app-body__number">Fanswifi</p> */}
               <FanswifiLogo className='App-logo' ariaLabel='logo' />
@@ -155,6 +157,11 @@ class App extends Component {
               <div className="inner bottom"></div>
               <div className="inner left"></div>
               <div className="inner right"></div>
+            </Link>
+
+            <Link className="app-body__block" to={`/${this.state.hostName}haikugenerator`} onClick={() => this.toggleProject('haikugenerator')}>
+              <HaikugeneratorLogo className='App-logo' ariaLabel='logo' />
+              <div className="app-body__title">Haiku Generator</div>
             </Link>
 
             <Link className="app-body__block" to={`/${this.state.hostName}werewolf`} onClick={() => this.toggleProject('werewolf')}>
@@ -173,7 +180,6 @@ class App extends Component {
               <div className="app-body__title">Codedrillz</div>
             </Link>
             <Link className="app-body__block" to={`/${this.state.hostName}rediscoverindigo`} onClick={() => this.toggleProject('rediscoverindigo')}>
-              {/* <p className="app-body__number">Rediscover Indigo</p>    */}
               <IndigoLogo className='App-logo' ariaLabel='logo' />
               <div className="app-body__title">Rediscover Indigo</div>
             </Link>

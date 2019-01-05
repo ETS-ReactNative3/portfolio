@@ -6,6 +6,7 @@ class ProjectTriangle extends Component {
 	render() {
 		return (
 			<div className="project__content">
+				<h1 className="project__title">Tri-angle</h1>
 				<p>
 					Tri-Angle is 3 triangular/modular lamps that can be placed at different angles. Tri-Angle consists of three tri-angular shaped pieces that lights up when another modular piece is connected with it.
 				</p>
@@ -21,7 +22,7 @@ class ProjectTriangle extends Component {
 
 				<img className="project__image" src={Image5} alt="Triangle Lamp Process Builds" />
 
-				<div className="project__collab-skills">
+				<div className="project__justify-flex">
 					<div className="project__collaborators">
 						<h3>Collaborators</h3>
 						<p>Bobby Soetarto</p>

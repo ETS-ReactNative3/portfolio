@@ -17,6 +17,7 @@ class ProjectRediscoverindigo extends Component {
 	render() {
 		return (
       <div className="project__content">
+        <h1 className="project__title">Rediscover Indigo</h1>
         <p>
           Rediscover Indigo is a mobile and web platform, designed to allow authors to showcase unpublished work and for readers to discover, support, and help bring their stories to the market.
         </p>
@@ -66,7 +67,7 @@ class ProjectRediscoverindigo extends Component {
         <img className="project__image" src={ImgJourneymapping} alt="Rediscover Indigo Journeymapping" />
         <img className="project__image" src={ImgJourneySketch} alt="Rediscover Indigo Journey Mapping Sketch"/>
 
-        <div className="project__collab-skills">
+        <div className="project__justify-flex">
 					<div className="project__collaborators">
 						<h3>Collaborators</h3>
 						<p>Michaela Tsumura</p>

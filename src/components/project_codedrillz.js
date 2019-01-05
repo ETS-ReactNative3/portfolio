@@ -10,13 +10,14 @@ class ProjectCodedrillz extends Component {
 	render() {
 		return (
       <div className="project__content">
+				<h1 className="project__title">CodeDrillz</h1>
         <img className="project__image" src={ImgHomescreen} alt="Codedrillz homescreen" />
 
         <p>
           A team project built over a 72 hour period for users to test their skills in coding which utilizes a point-based design for increased motivation. Built on Rails, Bootstrap, and jQuery. An emphasis was put towards GitHub collaboration and version control. My responsibilities included the website design using illustrator and front-end coding using jQuery and Bootstrap.
         </p>
 
-        <div className="project__collab-skills">
+        <div className="project__justify-flex">
 					<div className="project__collaborators">
 						<h3>Collaborators</h3>
 						<p>Amir Nabaei</p>

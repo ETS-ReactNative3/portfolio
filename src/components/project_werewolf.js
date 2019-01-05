@@ -17,6 +17,7 @@ class ProjectWerewolf extends Component {
 	render() {
 		return (
       <div className="project__content">
+        <h1 className="project__title">Werewolf</h1>
         <img className="project__image" src={Banner} alt="Werewolf Banner" />
 
         <p>
@@ -31,9 +32,14 @@ class ProjectWerewolf extends Component {
           During day time, the villagers and the seer must do their best to uncover the werewolves and lynch themwhile the werewolves must eliminate all the villagers.
         </p>
 
-        <a className="project__button" href="https://github.com/jshchui/fwnext" target="_blank" rel="noopener noreferrer">
-          Github
-        </a>
+        <div className="project__justify-flex">
+          <a className="project__button" href="https://github.com/jshchui/fwnext" target="_blank" rel="noopener noreferrer">
+            Github
+          </a>
+          <a className="project__button" href="https://chat-d457d.firebaseapp.com/" target="_blank" rel="noopener noreferrer">
+            Site
+          </a>
+        </div>
 
         <div className="project__skills-used">
           <h3>Technologies Used</h3>

@@ -9,6 +9,7 @@ class ProjectFanswifi extends Component {
 	render() {
 		return (
       <div className="project__content">
+        <h1 className="project__title">Fanswifi</h1>
         <img className="project__image" src={ImgHomescreen} alt="Fanswifi Homepage" />
 
         <p>

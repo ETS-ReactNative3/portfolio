@@ -6,11 +6,13 @@ import ImgHomepage from './../assets/nauticalcats/nauticalhomepage.jpg';
 import ImgInstructions from './../assets/nauticalcats/nauticalhowtoplay.jpg';
 import ImgVs from './../assets/nauticalcats/nauticalvs.jpg';
 import ImgWhalemap from './../assets/nauticalcats/whale.jpg';
+// import WebPlayer from './';
 
 class ProjectNauticalcats extends Component {
 	render() {
     return (
       <div className="project__content">
+        <h1 className="project__title">Nautical Cats</h1>
         <img className="project__image" src={ImgHomepage} alt="Nautical Cats Homescreen" />
         <p>
           Nautical Cats is a 2-D platformer player vs player (PVP) capture the fish game. The essential idea behind the game is for players to collect more Fish than their opponents before the time runs out.
@@ -69,12 +71,12 @@ class ProjectNauticalcats extends Component {
         <img className="project__image" src={ImgIcemap} alt="Nautical Cats Ice Map" />
         <p className="project__image-caption">Icy Cliffs: Extra Slippery with raining icicles!</p>
 
-        <h2>Try it</h2>
+        <a href="/webplayer/webplayer.html">Try it</a>
         <p>
           You can try the game however, the controls are different on PC and it unfortunately does not work on chrome. The web version currently supports only 2 players and will require a numpad.
         </p>
 
-        <div className="project__collab-skills">
+        <div className="project__justify-flex">
 					<div className="project__collaborators">
 						<p>Controls P1:</p>
 						<p>Jump: W</p>
@@ -95,7 +97,7 @@ class ProjectNauticalcats extends Component {
 				</div>
 
         
-        <div className="project__collab-skills">
+        <div className="project__justify-flex">
 					<div className="project__collaborators">
 						<h3>Collaborators</h3>
 						<p>Bobby Soetarto</p>
