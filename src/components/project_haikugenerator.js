@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Img1 from './../assets/haikugenerator/IMG1.JPG';
 import Img2 from './../assets/haikugenerator/IMG2.JPG';
 import Img3 from './../assets/haikugenerator/IMG3.JPG';
+import Img4 from './../assets/haikugenerator/IMG4.JPG';
 
 class ProjectHaikugenerator extends Component {
 	render() {
@@ -19,7 +20,7 @@ class ProjectHaikugenerator extends Component {
             Site
           </a>
         </div>
-        <img className="project__image" src={Img2} alt="Haiku Generator Home Page" />
+        <img className="project__image" src={Img4} alt="Generated Haiku" />
         <div className="project__skills-used">
           <h3>Technologies Used</h3>
           <p>Express JS</p>

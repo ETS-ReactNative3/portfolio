@@ -120,12 +120,7 @@ class App extends Component {
                 <rect x="958.39" y="529.14" width="2.56" height="25" transform="translate(-1051.84 305.33) rotate(-45)"/>
               </svg>
             </button>
-
-            <div className="nav__logo">
-              {/* <h3>Jackie Chui</h3> */}
-              <Logo />
-              {/* <img src={logo} className="App-logo" alt="logo" /> */}
-            </div>
+            <div className="nav__logo"><Logo /></div>
             <div className="nav__menu" onClick={() => this.toggleProject('nothing')}>
               <ul className="nav__menu-item">
                 <li><a href={Resume} target="_blank">Resume</a></li>
@@ -149,14 +144,8 @@ class App extends Component {
             </button>
 
             <Link className="app-body__block" to={`/${this.state.hostName}fanswifi`} onClick={() => this.toggleProject('fanswifi')}>
-              {/* <p className="app-body__number">Fanswifi</p> */}
               <FanswifiLogo className='App-logo' ariaLabel='logo' />
               <div className="app-body__title">Fanswifi</div>  
-
-              <div className="inner top"></div>
-              <div className="inner bottom"></div>
-              <div className="inner left"></div>
-              <div className="inner right"></div>
             </Link>
 
             <Link className="app-body__block" to={`/${this.state.hostName}haikugenerator`} onClick={() => this.toggleProject('haikugenerator')}>
@@ -165,26 +154,26 @@ class App extends Component {
             </Link>
 
             <Link className="app-body__block" to={`/${this.state.hostName}werewolf`} onClick={() => this.toggleProject('werewolf')}>
-              {/* <p className="app-body__number">Werewolf</p>   */}
               <WerewolfLogo className='App-logo' ariaLabel='logo' />
               <div className="app-body__title">Werewolf</div>  
             </Link>
+
             <Link className="app-body__block" to={`/${this.state.hostName}triangle`} onClick={() => this.toggleProject('triangle')}>
-              {/* <p className="app-body__number">Triangle</p> */}
               <TriangleLogo className='App-logo' ariaLabel='logo' />
               <div className="app-body__title">Triangle</div>  
             </Link>
+
             <Link className="app-body__block" to={`/${this.state.hostName}codedrillz`} onClick={() => this.toggleProject('codedrillz')}>
-              {/* <p className="app-body__number">CodeDrillz</p>       */}
               <CodedrillzLogo className='App-logo' ariaLabel='logo' />
               <div className="app-body__title">Codedrillz</div>
             </Link>
+
             <Link className="app-body__block" to={`/${this.state.hostName}rediscoverindigo`} onClick={() => this.toggleProject('rediscoverindigo')}>
               <IndigoLogo className='App-logo' ariaLabel='logo' />
               <div className="app-body__title">Rediscover Indigo</div>
             </Link>
+
             <Link className="app-body__block" to={`/${this.state.hostName}nauticalcats`} onClick={() => this.toggleProject('nauticalcats')}>
-              {/* <p className="app-body__number">Nautical Cats</p>  */}
               <div className="css-logo-animation-hack">
                 {/* I need a hack here because I cannot transform rotate and translate seperately */}
                 <NauticalLogo className='App-logo' ariaLabel='logo' />
@@ -192,6 +181,7 @@ class App extends Component {
               <div className="app-body__title">Nautical Cats</div>
             </Link>
           </div>
+
           <Project
             className={this.state.projectShowing ? 'project project--show' : 'project project--hide'}
             currentProject={this.state.currentProject}

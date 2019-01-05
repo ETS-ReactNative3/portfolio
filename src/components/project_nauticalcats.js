@@ -71,9 +71,9 @@ class ProjectNauticalcats extends Component {
         <img className="project__image" src={ImgIcemap} alt="Nautical Cats Ice Map" />
         <p className="project__image-caption">Icy Cliffs: Extra Slippery with raining icicles!</p>
 
-        <a href="/webplayer/webplayer.html">Try it</a>
+        
         <p>
-          You can try the game however, the controls are different on PC and it unfortunately does not work on chrome. The web version currently supports only 2 players and will require a numpad.
+          You can <a href="/webplayer/webplayer.html">try the game here.</a> However, the controls are different on PC and it unfortunately does not work on chrome. The web version currently supports only 2 players and will require a numpad.
         </p>
 
         <div className="project__justify-flex">

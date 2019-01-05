@@ -19,10 +19,14 @@ class ProjectFanswifi extends Component {
         <p>
           For their exhibition in Singapore, I redesigned and developed their website to clearly articulate business values to their clients.
         </p>
-
-        <a className="project__button" href="https://github.com/jshchui/fwnext" target="_blank" rel="noopener noreferrer">
-          Github
-        </a>
+        <div className="project__justify-flex">
+          <a className="project__button" href="https://github.com/jshchui/fwnext" target="_blank" rel="noopener noreferrer">
+            Github
+          </a>
+          <a className="project__button" href="https://www.fanswifi.com/" target="_blank" rel="noopener noreferrer">
+            Site
+          </a>
+        </div>
 
         <div className="project__skills-used">
           <h3>Technologies Used</h3>

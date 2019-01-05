@@ -5,6 +5,7 @@
 h1, h2, h3 {
   text-align: center;
   font-weight: 400;
+  color: #3a3a3a;
 }
 
 h2 {
@@ -181,48 +182,6 @@ a {
       transform: translateY(-20px)
     }
   }
-
-  .inner {
-    position: absolute;
-    // background-color: black;
-  }
-
-  .top {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-  }
-
-  .bottom {
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 1px;
-  }
-
-  .left {
-    bottom: 0;
-    left: 0;
-    width: 1px;
-    height: 100%;
-  }
-
-  .right {
-    top: 0;
-    right: 0;
-    width: 1px;
-    height: 100%;
-  }
-}
-
-.app-body__number {
-  position: absolute;
-  top: 5px;
-  left: 12px;
-  margin: 0;
-  font-size: 1em;
-  text-transform: uppercase;
 }
 
 .logo-container {
