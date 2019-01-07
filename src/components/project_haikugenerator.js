@@ -11,6 +11,10 @@ class ProjectHaikugenerator extends Component {
         <h1 className="project__title">Haiku Generator</h1>
         <img className="project__image" src={Img1} alt="Haiku Generator Home Page" />
         <p>Haiku Generator generates a not too great haiku based on the words from an Image. Right now the Haiku only contains adjectives and nouns!</p>
+        <p>
+          The purpose of this Haiku Generator was to play around and test out the capabilities of the <a href="https://cloud.google.com/vision/">Google Vision API</a>.
+          Google Vision provides the nouns and the adjectives are from the <a href="https://www.datamuse.com/api/">Datamuse API</a>.
+        </p>
         <p>The image is sent to the google api which will return a list of web and label words. Those words will be randomly chosen to create a 5 7 5 haiku.</p>
         <div className="project__justify-flex">
           <a className="project__button" href="https://github.com/jshchui/haiku-generator" target="_blank" rel="noopener noreferrer">
@@ -25,6 +29,7 @@ class ProjectHaikugenerator extends Component {
           <h3>Technologies Used</h3>
           <p>Express JS</p>
           <p>Google Vision API</p>
+          <p>Datamuse API</p>
         </div>
       </div>
 		)

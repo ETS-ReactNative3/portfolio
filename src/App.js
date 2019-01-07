@@ -145,7 +145,8 @@ class App extends Component {
 
             <Link className="app-body__block" to={`/${this.state.hostName}fanswifi`} onClick={() => this.toggleProject('fanswifi')}>
               <FanswifiLogo className='App-logo' ariaLabel='logo' />
-              <div className="app-body__title">Fanswifi</div>  
+              {/* <div style={{maxWidth: '200px', fontSize: '13px'}}>Website created for their exhibition in Singapore to clearly articulate Fanswifi's business values</div> */}
+              <div className="app-body__title">Fanswifi</div>
             </Link>
 
             <Link className="app-body__block" to={`/${this.state.hostName}haikugenerator`} onClick={() => this.toggleProject('haikugenerator')}>
